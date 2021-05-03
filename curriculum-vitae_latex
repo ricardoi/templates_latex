@@ -1,0 +1,226 @@
+\documentclass[margin,line]{res}
+\oddsidemargin -.5in
+\evensidemargin -.5in
+\textwidth=6.0in
+\itemsep=0in
+\parsep=0in
+% if using pdflatex:
+%\setlength{\pdfpagewidth}{\paperwidth}
+%\setlength{\pdfpageheight}{\paperheight} 
+%\usepackage{soul}
+\usepackage{hyperref} % adding a citable link to LaTex documents
+\usepackage{listings}
+
+\newenvironment{list1}{
+  \begin{list}{\ding{113}}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
+      \setlength{\leftmargin}{0.17in}}}{\end{list}}
+\newenvironment{list2}{
+  \begin{list}{$\bullet$}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
+      \setlength{\leftmargin}{0.2in}}}{\end{list}}
+
+
+\begin{document}
+
+\name{Ricardo I. Alcal\'a-Brise\~no \vspace*{.1in}}
+
+\begin{resume}
+\section{\sc Contact Information}
+\vspace{.05in}
+\begin{tabular}{@{}p{2in}p{4in}}
+             & {\it cell phone:}  (352) 460-8011 \\            
+Department of Plant Pathology   & {\it work phone:}    (352) 273-4632 \\         
+University of Florida& {\it E-mail:}  ralcala@ufl.edu, ricardoi.alcalab@gmail.com\\       
+Gainesville, Fl 32611 USA  & %{\it WWW:} www.ufl.edu 
+\\     
+\end{tabular}
+
+
+%\section{\sc Research Interests} 
+%I am interested in two main areas: \\
+%{\bf1)} The discovery of viral populations using next generation sequencing and the study of the diversity of plant viruses applied to ecological and agronomic fields \\
+%{\bf 2)} The analysis of plant - pathogens interactions through bipartite networks, describing movement of pathogen aiming to describe large-scale interactions and prediction of possible emerging pathogens\\
+%{\bf 2)} The interaction of viruses with plants using transcriptome analysis aiming to develop gene networks interactions to elucidate new strategies of plant resistance. \\
+ % Put something in seeds systems [for the future].
+
+\section{\sc Education}
+{\bf Ph.D., Plant Pathology}  \\
+University of Florida, \\
+{\em Department of Plant Pathology, Food Systems Institute, \& Emerging Pathogens Institute} \\
+ Gainesville, Florida, USA. May 2021.
+%\vspace*{-.1in} \textemdash long dash option
+\begin{list1}
+\item[] Dissertation Topic: ``{\bf Virome Network Analysis:} A network framework for studying landscape agroecological  of plant viromes for disease management.
+\begin{list2}
+\vspace*{.05in}
+\item[]Advisor: \bf {Karen A. Garrett}
+\end{list2}
+\vspace*{.05in}
+\end{list1}
+
+{\bf M.Sc., Plant Biotechnology} \\
+CINVESTAV--IPN. Research Center of Advance Studies at National Polytechnic Institute \\
+{\em Department of Genetic Engineering} \\
+Irapuato, Guanajuato, Mexico. August, 2012. 
+%Centro de Estudios Avanzados del Instituto Polit\'ecnico Nacional
+%\vspace*{-.1in}
+\begin{list1}
+\item[] Thesis Topic:  ``Characterization of {\it Sugarcane mosaic virus} (SCMV) --CAM6--1, an approach to identify the molecular mechanism of virus --host interaction in two different hosts: sugarcane and maize" 
+%\end{list1}
+\begin{list2}
+\vspace*{.05in}
+\item[] Advisor:  {\bf Laura Silva-Rosales}
+\end{list2}
+\vspace*{.05in}
+%\item[] M.S., Statistics,  May 2000
+\end{list1}
+
+{\bf B.S., Biology}\\
+University of Guadalajara, University Center of Biological and Agricultural Sciences (CUCBA)\\
+Guadalajara, Jalisco, Mexico,   Feb, 2008.
+%\vspace*{-.1in}
+\begin{list1}
+%\end{list1}
+\vspace*{.05in}
+\item[] Thesis Topic:  ``Development of RNA chromatography to identify proteins that interact with the 5' UTR of {\it Sugarcane mosaic virus} (SCMV) infecting maize'' 
+\item[] Research done in the {\em Department of Genetic Engineering} at CINVESTAV -IPN. \\ Irapuato, Guanajuato. Feb 2007 -- Feb 2008.
+%\item Dissertation Topic:  ``Hierarchical Models for Multiple Ratings
+%  in Performance-Based\\ \hspace*{1.23in} Student Assessments.'' 
+\begin{list2}
+\vspace*{.05in}
+\item[]Advisor: {\bf Laura Silva-Rosales}
+\end{list2}
+%\item[] M.S., Statistics,  May 2000
+\end{list1}
+
+
+
+\section{\sc Honors and Awards} 
+\begin{list2}
+%\vspace{.05cm}
+\item[] {\bf International Outstanding Achievement Award 2018}. College of Agriculture and Life Sciences, {\bf University of Florida}.\\
+\end{list2}
+
+\section{\sc Scholarships} 
+\begin{list2}
+\item[] {\bf 2019--2021} 	Research Assistantship (University of Florida).  Jul 2019 -- May 2021. \\ %\
+\end{list2}
+
+%\section{\sc Academic Experience}
+%\vspace{-.1cm}
+%{\em Teaching Assistant} \hfill {\bf Febraury - April 2017 }\\
+%Duties at various times have included office hours and leading weekly lab exercises.
+
+\section{\sc Manuscript in preparation}
+\vspace{0.5cm}
+
+Etherton BA, Choudhury R, , Xing Y, {\bf Alcal\'a Brise\~no RI}, Crane JH, Evans E,  Wasielewski J,  Stelinski LL, Ploetz R, Grogan K, Garrett KA. Regional network analysis to understand the effects of farmer management decisions on the avocado laurel wilt epidemic in Florida  \vspace{.05cm}
+
+
+\section{\sc Publications}
+\vspace{0.5cm}
+
+\section{\sc 2020}
+
+{\bf Alcal\'a-Brise\~no RI}, Casarrubias-Castillo K, L\'opez-Ley D, Garrett KA, Silva-Rosales L. Network analysis of the papaya orchard virome from two agroecological regions of Chiapas, Mexico. mSystems. 5(1):0423-19. (\url{https://doi.org/10.1128/mSystems.00423-19})
+
+
+\section{\sc Books and book chapters}
+
+Garrett KA, {\bf Alcal\'a-Brise\~o} RI, Andersen KF, Choudhury RA, Dantes W, Fayette J, Fulton JC, Poudel R, Staub CG. {\bf2020}. Adapting disease management systems under global change. Emerging Plant Diseases and Global Food Security. Ristaino, JB, and Records, A. Eds. APS Publications. ISBN 9780890546383
+ 
+\section{\sc Proceedings}
+{\bf Alcal\'a-Brise\~no RI}, Rodr\'iguez-Rios D, Echegoyen-Nava R, Alvarado Y, Zaina S, Lund G. Identification of DNA methylation targets of in transgenics mice lung by {\it Hpa}II metiltransferase ({\it Hpa}MT). Avances de la investigaci\'on cient\'ifica en el CUCBA. XVIII semana de la investigaci\'on cient\'ifica. pp. 178-181. Carbajal S. y Pimientas-Barrios E (eds). Universidad de Guadalajara y Consejo Estatal de Ciencia y Tecnolog\'ia. Gobierno del Estado de Jalisco. Zapopan, Jal. M\'exico. {\bf 2007} (ISBN 9789702712800).
+
+\section{\sc Invited Presentations}
+\vspace{.05cm}
+Master lecture at the {\em Symposium of the Peru Potato Virome: Project results and closure}. Papaya Virome in Southeast Mexico: Discovery of associations of viruses using viral metagenomics and network analysis. {\bf International Potato Center (CIP)}. Lima, Peru. March 19, 2019.
+
+\section{\sc  Upcoming Presentations}
+\vspace{1cm}
+
+Plex Sul\'a AI*,  {\bf Alcal\'a Brise\~no RI},   Xing Y,  Etherton BA, Andersen KF,  Andrade-Piedra JL, Dita Rodriguez MA, Hodson D, Jarvis A, Kreuze JF,  Sonder K, Suresh  LM, Garrett KA. Geographic disease risk analysis for major crops of Central America and Mexico: regional analyses and global structures  {\bf Plant Health -- American Phytopathological Society  2021}. Virtual Meeting. August 2 -- 6 [Presentation by *] \vspace{.05cm}
+
+Xing Y,  Plex Sulá AI*,  {\bf Alcal\'a Brise\~no RI},  Etherton BA,  Choudhury R,  Andersen KF, Garrett KA. Cropland connectivity: best practices for incorporation in geographic risk analyses {\bf Plant Health -- American Phytopathological Society  (APS) 2021}. Virtual Meeting. August 2 -- 6 [Presentation by *] \vspace{.05cm}
+
+Choudhury R, Etherton BA*, Xing Y, {\bf Alcal\'a Brise\~no RI}, Crane JH, Evans E,  Wasielewski J,  Stelinski LL, Ploetz R, Grogan K, Garrett KA. Regional network analysis to understand the effects of farmer management decisions on the avocado laurel wilt epidemic in Florida {\bf Plant Health -- American Phytopathological Society  2021}. Virtual Meeting. August 2 -- 6 [Presentation by *] \vspace{.05cm}
+
+\section{\sc  Conference Presentations}
+\vspace{1cm}
+
+\section{\sc 2021}
+
+{\bf Alcal\'a-Brise\~no RI}, Fuentes S, Perez A, Kreuze JF, Garrett KA. Diversity and community structure of the Peruvian potato virome. {\bf American Phytopathological Society Southern Division 2021}. Virtual Meeting. February 15 -- 19 [Oral presentation] \vspace{.05cm}
+
+\section{\sc 2020}
+
+{\bf Alcal\'a-Brise\~no RI}, Kreuze JF, Garrett KA. A network analysis framework for complex virome data. {\bf American Phytopathological Society: Plant Health 2020}. St. Paul, Minnesota. August 10 -- 14 [Poster presentation] \vspace{.05cm}
+
+
+\section{\sc Professional Experience}
+\begin{list2}
+\item[] {\bf University of Florida}, Gainesville, Florida, USA.
+\end{list2}
+
+
+\section{\sc Graduate teaching assistance and guest lectures}
+\begin{list2}
+\item[] {\em Guest lecture} \hfill {\bf April, 2021}. \\ 
+Virology  {\bf PLP-6905}. University of Florida. Gainesville, Fl. Fall.\\
+\item[] {\em Teaching assistant} \hfill {\bf Aug - Dec, 2020}. \\ 
+Epidemiology and Data Sciences {\bf PLP-6905}. University of Florida. Gainesville, Fl. Fall, 16 weeks (40 hours).\\
+\end{list2}
+
+%\vspace{-.1cm}
+
+\section{\sc Workshops and trainings}
+\begin{list2}
+\item[] {\em Instructor} \hfill {\bf March 2 -- 4, 1999}. \\
+Workshop `Analysis applied to agricultural systems' . University of Costa Rica. San Jos\'e, Costa Rica. (21 hours)\\
+\item[] {\em Instructor} \hfill {\bf July 1, 2020}. \\
+Workshop `Network Analysis'. International Conference of Plant Pathology. Boston, United States of America. (5 hours)\\
+\end{list2}
+
+\section{\sc Affiliations}
+\begin{list2}
+\item[] Member of the American Society {\bf (ASUS)}. 2000 - present\\
+\item[] Member of the American Meeting {\bf (APS)}. 2000 - present\\ 
+\end{list2}
+
+\section{\sc Repositories} 
+\begin{list2}
+\item[] {\bf github}: https://github.com/yours
+\end{list2}
+
+
+\section{\sc Computer and laboratory skills} 
+\begin{list2}
+\item[] {\bf Programming}: R, Linux/Unix, bash, Python, High Performance Computer (HPC) cluster, Mac OS and Unix/Linux user.
+\item[] {\bf Text and vector graphics processors}: {\LaTeX}, Office packages, Inkscape, Affinity Designer and Illustrator.
+\end{list2}
+
+\section{\sc Other activities}
+\begin{list2}
+\item {\bf Organization 1}. {\bf 1999-present}. \\
+Organization 1 and activities 
+\subitem- {\bf } Duties:  Coordinating something. \\ 
+\\item {\bf Organization 2)}. {\bf 1999-present}. University Student Organization at University of Florida.
+Activities in that organization    
+\end{list2}
+
+
+
+
+
+\section{\sc Workshops} 
+\begin{list2}
+\item {\bf Show Me the Money}: Effective Grantsmanship. December 13 2017. \\\vspace{0.05 cm}
+\end{list2}
+
+\end{resume}
+\end{document}
