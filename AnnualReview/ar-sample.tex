@@ -1,0 +1,1114 @@
+% ar-sample-1col.tex, dated 30th Mar. 2013
+% This is a sample file for AR journals
+%
+% Compilation using 'ar.cls' - version 1.0, Aptara Inc.
+% (c) 2013 AR
+%
+% Steps to compile: latex latex latex
+%
+% For tracking purposes => this is v1.0 - Mar. 2013
+
+
+\documentclass{ar-1col}
+%
+\usepackage{rotating}%
+%\usepackage[numbers]{natbib}%
+%
+% 
+% Metadata Information
+\jname{Xxxx. Xxx. Xxx. Xxx.}
+\jvol{00}
+\jyear{YYYY}
+\doi{10.1146/((please add article doi))}
+
+% Document starts
+\begin{document}
+
+% Page heads
+\markboth{Shaul Mukamel}{Multidimensional Attosecond X-Ray Spectroscopy}
+
+% Title
+\title{Multidimensional Attosecond Resonant X-Ray Spectroscopy of Molecules; Lessons from the Optical Regime}
+
+% Author/affiliation
+\author{Shaul Mukamel,$^1$ Daniel Healion,$^2$ Yu Zhang,$^3$ and Jason D. Biggs$^1$%
+\affil{$^1$Department of Chemistry, University of California, Irvine, CA 92697}
+\affil{$^2$Department of Chemistry and Ames Laboratory, Iowa State University, Ames, Iowa 50011; email: mark@si.msg.chem.iastate.edu, schrodinator@gmail.com, pxu@iastate.edu}
+\affil{$^3$Department of Chemistry, Purdue University, West Lafayette, Indiana 47907; email: lslipchenko@purdue.edu}}
+
+% Abstract
+\begin{abstract}
+New free-electron laser and high-harmonic generation x-ray light
+  sources are capable of supplying pulses short and intense enough to
+  perform resonant nonlinear time-resolved experiments in molecules. Valence electron motions can be triggered impulsively by
+  core excitations and monitored with high temporal and spatial
+  resolution.  We discuss possible experiments that employ attosecond
+  x-ray pulses to probe quantum coherence and correlations of valence
+  electrons and holes, rather than the charge density alone, building
+  upon the analogy with existing studies of vibrational motions using femtosecond techniques in the visible regime. 
+\end{abstract}
+
+% Keywords
+\begin{keywords}
+ultrafast, core electron correlation, coherence, stimulated Raman
+\end{keywords}
+
+
+\maketitle
+
+% to generate article TOC
+%\tableofcontents
+
+
+% Head 1
+\section{INTRODUCTION}
+
+% Head 2
+\subsection{Time-Domain X-ray Sources and Spectroscopy}
+
+Nonlinear spectroscopy with visible light became feasible soon after
+the laser was invented in the 1960's.  When the applied electric
+fields are weak compared to those inside an atom or a molecule
+($5.14\times 10^{11}$ V/m for an electron or proton
+at a distance of 1 $a_o)$, the response and optical
+signals are \emph{linear} in the incoming intensities, and reveal some
+information about excited states and their transition dipoles through
+a two-point correlation function of the dipole operator. At higher field intensities,
+a nonlinear response in the induced polarization is
+observed, and the resulting signals encode much more information than
+the linear response related to higher order multiple-point correlation
+functions.\cite{bloembergen_nonlinear_1982,zewail_femtochemistry:_2000}
+The development of nonlinear spectroscopy was enabled by progress in laser technology. As pulse durations shortened from picoseconds in
+the seventies to femtoseconds in the eighties, they were employed in
+increasingly intricate time-resolved probes of molecular excited
+states.%  This review describes possible extensions of these techniques facilitated by recent developments of attosecond x-ray pulses.
+
+% Margin note
+\begin{marginnote}
+\entry{XANES}{X-ray absorption near-edge structure}
+\entry{EXAFS}{extended X-ray absorption fine structure}
+\entry{XFEL}{X-ray free-electron laser}
+\entry{HHG}{higher-harmonic generatio}
+\end{marginnote}
+
+
+\subsection{Vibrational vs. Electronic Franck-Condon Factors}
+X-ray linear
+absorption\cite{Stohr1996,groot_core_2008,santra_concepts_2009} probes
+the unoccupied density of states around the resonant core; the jump in
+signal intensity as the frequency reaches the first available
+unoccupied state is called the \emph{core-edge}.  The low energy
+region of the spectrum, x-ray absorption near-edge structure (XANES),
+is a direct probe of these virtual orbitals weighted by their atomic
+core dipole matrix elements.  Higher energy spectral features, the
+extended x-ray absorption fine structure (EXAFS), are created by
+backscattering of the photoionized core electron.  A Fourier transform of
+this region yields the structure factor of the nuclei surrounding the
+resonant
+core,\cite{chen_capturing_2001,rehr_theoretical_2000,bressler_ultrafast_2004}
+as the tightly bound core-electrons on neighboring atoms have the
+largest cross-section for reflecting this photoelectron.%%   X-ray
+%% diffraction (off-resonant elastic scattering) with few keV
+%% photons solely probes the charge density and can be treated
+%% classically.
+
+
+\begin{marginnote}[140pt]
+\entry{CT}{charge transfer}
+\entry{QM}{quantum mechanics}
+\entry{MP2}{second-order perturbation theory}
+\entry{CC}{coupled cluster}
+\entry{MM}{molecular mechanics}
+\entry{EFP}{effective fragment potential}
+\entry{LMO}{localized molecular orbital}
+\end{marginnote}
+
+\subsection{One-Dimensional Impulsive Stimulated Raman; 1D-SXRS}
+The first sources of x-ray light were anode targets for cathode rays
+in vacuum.\cite{roentgen_new_1896} The high cross-section for x-ray
+photon capture in matter, and the short lifetime of the core hole,
+meant that modifying traditional laser cavities to create a population
+inversion and lasing at x-ray frequencies would be
+difficult.\cite{duguay_approaches_1967} Fortunately, synchrotron
+radiation, considered an undesired loss in high-energy particle
+experiments, was found incredibly useful for performing experiments in
+chemistry, biology, and condensed matter
+physics.\cite{perlman_synchrotron_1974} These large facilities convert
+electron bunch kinetic energy into short, broadband bursts of bright
+x-ray radiation.\cite{duke_synchrotron_2009} The intensity and high
+frequencies of the photons available at the highly intense XFEL
+sources built at DESY, LCLS,\cite{emmap._first_2010}
+(e.g. $10^{12}$ photons in 85 attoseconds at frequency 8~keV),\cite{emmap._first_2010}
+can generate sequences of pulses suitable for coherent spectroscopy applications.\cite{nugent_coherent_2010} Methods for generating intense $\sim1$ fs pulses with
+UV and VUV frequencies have been proposed.\cite{reiter_route_2010}
+\begin{eqnarray}
+&&E^{\it XR}  =  - 2\sum_{i \in A} {\sum_{j \in B} {( {ij\,{\mid}\, {ij} )} } }  - 2\sum_{i \in A} {\sum_{j \in B} {S_{\it ij} \left[ {2( {V_{\it ij}^A  + G_{\it ij}^A } ) + \sum_{l \in B} {F_{jl}^B S_{\it li} } } \right]} }  \nonumber\\
+&&\hspace*{26pt}+ 2\sum_{i \in A} {\sum_{j \in B} {S_{\it ij} \left[ {\sum_{k \in A} {S_{kj} ( {F_{ik}^A  + V_{ik}^B  + {J}_{ik}^B } )}  + S_{\it ij} ( {V_{\it jj}^A  + {J}_{\it jj}^A } ) - \sum_{k \in A} {S_{kj} ( {ik| {\it jj} )} } } \right]} } ,\qquad 
+\end{eqnarray}
+
+
+In a parallel development, tabletop attosecond higher-harmonic
+generation (HHG)
+\cite{kapteyn_harnessing_2007,krausz_attosecond_2009,worner_attosecond_2011,hentschel_attosecond_2001,popmintchev_attosecond_2010}
+sources provide an alternative to the XFEL. These generate pulses of
+high frequency light through a process where a weakly bound electron
+in the molecule is ionized, then accelerated back towards the molecule
+as the driving field changes phase.
+\begin{eqnarray}
+&&\hspace*{-30pt}V_{\it mi}^{\it XR}  =  - \sum_{j \in B} {( {mj} \,{\mid}\, {ij} )}  - \frac{1}{2}\sum_{j \in B} {S_{\it mj} \left[ {2( {V_{\it ij}^A  + G_{\it ij}^A } ) + \sum_{l \in B} {F_{jl}^B S_{\it li} } } \right]}  \nonumber\\
+&&- \frac{1}{2}\sum_{j \in B} {\left[ {2( {V_{\it mj}^A  + G_{\it mj}^A } ) + \sum_{l \in B} {F_{jl}^B S_{lm} } } \right]} \nonumber \\
+&&- \sum_{k \in A} {\sum_{j \in B} {S_{kj} \left[ {4( {kj\,{\mid}\, {mi} ) - ( {km\,{\mid}\, {ji} ) - } ( {ki\,{\mid}\, {jm} )} } } \right]} } \nonumber \\
+&&+ \sum_{j \in B} {S_{\it mj} \left[ {\sum_{k \in A} {S_{kj} ( {F_{ik}^A  + V_{ik}^B  + {J}_{ik}^B } ) - ( {ik\,{\mid}\, {\it jj} ) + S_{\it ij} ( {V_{\it jj}^A  + {J}_{\it jj}^A } )} } } \right]} \nonumber \\
+&&+ \sum_{j \in B} {S_{\it ij} } \left[ {\sum_{k \in A} {S_{kj} ( {F_{mk}^A  + V_{mk}^B  + {J}_{mk}^B } ) - ( {mk\,{\mid}\, {\it jj} )} } } \right]\nonumber \\
+&&+ \frac{1}{2}\sum_{n \in A} {\sum_{k \in A} {\sum_{j \in B} {S_{kj} S_{nj} \left[ {4 ( {nk\,{\mid}\, im} ) - ( {nm\,{\mid}\, ik} ) - ( {ni\,{\mid}\, mk} )} \right]} } }%  + 2\sum_{k \in A} {\sum_{j \in B} {S_{kj}^2 ( {jj\,{\mid}\, mi} ),} }  
+\end{eqnarray}
+The photoelectron has two chances to recombine with the hole it leaves
+behind for each cycle of the field, leading to a highly nonlinear
+frequency doubling process capable of generating very high frequency
+components which can be recombined to form attosecond pulses.
+Ultrafast pulses with central frequency $\sim 800$~eV and $\sim$700~eV
+bandwidths were recently reported, potentially yielding 2.5~as Fourier
+transform limited pulse after
+compression.\cite{popmintchev_bright_2012,bourzac_tabletop_2012} %% HHG
+%% pulse intensities ($\sim 10^7$ photons/pulse) are considerably lower
+%% than the XFEL ( $\sim10^{12-13}$ photons/pulse).
+%%   XUV pulses with
+%% widths as short as 80~as (at 80~eV central frequencies) were generated.\cite{goulielmakis_single-cycle_2008}
+
+% Table
+\begin{table}
+\tabcolsep14.25pt
+\caption{The total CPU time (in seconds) for an EFP-EFP energy or gradient calculation of (NH$_4^+$-NO$_3^-$)$_4$ at various basis sets using either canonical molecular orbitals (CMOs) or quasiatomic minimal-basis-set orbitals/valence virtual orbitals (VVOs)}
+\label{tab1}
+\begin{center}
+\begin{tabular}{@{}l|c|c|c|c|c@{}}
+\hline
+&&\multicolumn{2}{c|}{{\bf Energy}} &\multicolumn{2}{c}{{\bf Gradient}}\\
+\hline
+&{\bf Number of}&&&&\\
+{\bf Basis set} &{\bf basis functions} &{\bf CMO} &{\bf VVO} &{\bf CMO} &{\bf VVO}\\
+\hline
+6--31$+$G(d,p) &460 &2.12 &1.04 &8.63 &3.48\\
+\hline
+6-31$+$$+$G(d,p) &476 &2.24 &0.94 &9.22 &3.73\\
+\hline
+6-31$+$$+$G(df,p) &676 &3.71 &1.67 &16.36 &6.00\\
+\hline
+6-311$+$G(d,p) &572 &2.86 &1.29 &11.90 &4.56\\
+\hline
+6-311$+$$+$G(3df,2p) &1,060 &7.54 &3.25 &36.70 &11.45\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\section{SPONTANEOUS VS. STIMULATED X-RAY RAMAN TECHNIQUES}
+
+
+\subsection{Frequency-Domain Spontaneous Raman; RIXS}
+
+Spectroscopic techniques have historically built upon earlier technological
+advances in lower frequency regimes.  Optical
+techniques had benefited from the vast experience in nuclear magnetic
+resonance (NMR) spectroscopy which uses radio waves to study
+spins, where the pulse technology had existed since the
+forties. Similarly, the emerging x-ray studies could draw upon the
+analogy with advances made in the eighties in the visible and the infrared
+regimes.
+\begin{eqnarray*}
+&\displaystyle F_{ik}^A  + V_{ik}^A  + {J}_{ik}^B  \approx F_{ik}^A  + V_{ik}^{ES,B}  \approx F_{ik}^A  + V_{ik}^{\it EFP,B} ,\\
+&\displaystyle (ik\,{\mid}\, {\it jj}) \approx ( {i\,{\mid}\, (r_1  - R_{j} )^{ - 1} \,{\mid}\, k} ) = V_{ik}^j ,\\
+&\displaystyle V_{\it jj}^A  = \sum_{j \in B} {\sum_{I \in A} {\frac{{ - Z_I }}{{R_{jI} }}} } .
+\end{eqnarray*}
+The current status of ultrafast x-ray studies is reminiscent
+of the early days of nonlinear optical
+spectroscopy.\cite{bucksbaum_chapter_2011} Coherent attosecond
+pulses\cite{walmsley_characterization_2009} offer a new set of tools
+to the experimenter, which allow the direct real-time study of core and valence
+excitations.\cite{adams_nonlinear_2003} The detailed
+information gained regarding electron correlations and their response to
+impulsive perturbations may serve as experimental tests of many-body
+theory.  In principle, time-domain techniques provide the same
+information as their frequency domain counterparts; the two are connected by multidimensional Fourier transforms.\cite{Mukamel1995}  However,
+ultrafast signals may be interpreted intuitively in
+terms of wavepacket evolution, and pulsed experiments can be designed to
+reveal desired information, which in many cases is highly averaged and hard to extract in
+the frequency domain.\cite{zewail_femtochemistry:_2000}
+Multidimensional time-domain signals, obtained in response to sequences of impulsive temporally well-separated pulses, probe the correlation between
+dynamical events occurring during different controlled interpulse delays by observing spins (NMR),
+vibrations (optical and infrared), or valence and core electrons (x-rays).\cite{mukamel_coherent_2009} This review focuses on possible applications of
+multidimensional all-x-ray time-domain techniques towards the study of valence excitations in
+molecules.
+
+\begin{marginnote}
+\entry{Double core hole (DCH)}{the two holes can be on a single site or on two sites}
+\end{marginnote}
+
+
+\begin{table}
+\tabcolsep18pt
+\caption{Exchange repulsion energies (in kcal mol$^{-1}$) obtained from benchmark calculations and quantum mechanics (QM)-EFP calculations}
+\label{tab2}
+\begin{center}
+\begin{tabular}{@{}l|c|c|c@{}}
+\hline
+&&{\bf QM-EFP best} &{\bf QM-EFP worst}\\
+{\bf Exchange repulsion} &{\bf Benchmark} &{\bf agreement} &{\bf agreement}\\
+\hline
+(H$_2$O)$_3$ &15.0 &16.6 &17.0\\
+\hline
+(MeOH)$_3$ &13.5 &13.5 &16.2\\
+\hline
+((CH$_3$)$_2$CO)$_3$ &5.6 &4.4 &4.2\\
+\hline
+(CH$_3$CN)$_3$ &5.1 &4.3 &3.9\\
+\hline
+(CH$_2$Cl$_2$)$_3$ &1.1 &1.0 &2.4\\
+\hline
+3DMSO &10.1 &8.1 &Not converged\\
+\hline
+(H$_2$O)$_4$ &29.3 &28.4 &27.4\\
+\hline
+(H$_2$O)$_5$ &39.1 &36.7 &35.3\\
+\hline
+(H$_2$O)$_6$-bag &42.5 &43.6 &35.3\\
+\hline
+(H$_2$O)$_6$-boat &43.3 &40.9 &36.5\\
+\hline
+(H$_2$O)$_6$-book &43.8 &43.8 &39.8\\
+\hline
+(H$_2$O)$_6$-cage &40.9 &41.7 &38.6\\
+\hline
+(H$_2$O)$_6$-cyclic &45.0 &41.8 &36.2\\
+\hline
+(H$_2$O)$_6$-prism &39.8 &40.1 &41.3\\
+\hline
+(H$_2$O)$_{16}$ &118.3 &118.6 &123.5\\
+\hline
+\end{tabular}
+\end{center}
+\begin{tabnote}
+The third and fourth columns show the smallest and the largest deviations from the reduced variational space (RVS) interaction energies when different molecules are treated ab initio. For all systems except (H$_2$O)$_{16}$, the benchmark results were obtained from the RVS analysis. The (H$_2$O)$_{16}$ benchmark value was obtained from an all-EFP calculation. All of the cluster structures were optimized with RHF/6-31$+$G(d,p), and the EFPs were generated with the 6-311$+$$+$G(3df,2p) basis set.
+\end{tabnote}
+\end{table}
+
+
+\subsection{Nonlinear X-ray Spectroscopy}
+
+Nonlinear effects in the x-ray regime have long been observed in the
+frequency domain,\cite{adams_nonlinear_2003} including parametric
+down-conversion,\cite{danino_parametric_1981,freund_parametric_1969,yoda_x-ray_1998,adams_parametric_2000}
+hard x-ray frequency doubling,\cite{nazarkin_nonlinear_2003} and
+two-photon x-ray fluorescence.\cite{freund_nonlinear_1972} X-ray
+parametric down-conversion has been used to visualize  valence
+charge motion in optically excited
+diamond.\cite{tamasaku_visualizing_2011}  Two-photon
+x-ray emission from inner-core states were some of the first nonlinear x-ray processes to be treated
+theoretically.\cite{bannett_two-photon_1982} The x-ray/optical
+stimulated Raman process was predicted.
+\cite{arya_microscopic_1974,hudis_xray_1994,freund_surface_1973}
+
+
+
+\subsection{Direct Observation of Core Excitations by X-ray Four-Wave Mixing}
+Synchrotron radiation sources have
+vastly increased the quality of protein crystallography measurements
+using x-ray diffraction.\cite{deisenhofer_structure_1985} The high
+intensity of the XFEL sources allows to collect x-ray diffraction
+from a single-molecule in response to a single pulse. This enables
+structure determination without making crystals.\cite{chapman_femtosecond_2011} Time-dependent x-ray diffraction
+(TDXD) can measure the nonequilibrium change in the charge density
+triggered by interaction with a visible pump pulse.\cite{bargheer_coherent_2004,elsaesser_transient_2012} The three
+decade gap between the early theoretical papers on
+TDXD\cite{freund_optically_1970,eisenberger_mixing_1971,woo_inelastic_1972,freund_nonlinear_1972a}
+and the experimental measurement of
+phonon\cite{lindenberg_time-resolved_2000} and
+polariton\cite{cavalleri_tracking_2006} dynamics in solids gives some
+indication of the experimental difficulties associated with this
+technique. TDXD has been used to measure the ultrafast melting of a
+metal after excitation with a laser
+pulse.\cite{chen_time-resolved_2011} In the past decade, picosecond
+Time-resolved EXAFS has
+been used to measure vibrational and valence electronic dynamics in
+photoactive inorganic complexes.\cite{bressler_ultrafast_2004}
+In constrast to diffraction, resonant attosecond x-ray pulses can
+prepare coherent superpositions of core and valence states; revealing
+a qualitatively higher level of information about orbitals and spatial
+coherence that goes beyond the charge density.\footnote{An alternative ladder diagram approach is based on the many-body density matrix (rather than the wave function) and only requires forward evolution, which is more intuitive. However, for many-body problems the wave-function approach is much more practical, at the price of having to deal with backward evolution.}  A detailed theoretical
+description of valence particle and hole propagation in atoms and
+molecules showed that ultrafast charge motion driven by electronic
+interactions accompanies a sudden perturbation of the ground state
+charge
+density. \cite{breidbach_universal_2005}
+
+
+\begin{marginnote}
+\entry{MCSCF}{multiconfiguration self-consistent field}
+\entry{2EI}{two-electron integral}
+\end{marginnote}
+
+
+% Figure
+\begin{figure}
+\includegraphics[width=2.78in,height=3.48in]{fpo}
+\caption{Top: Loop diagrams for the 1D-SXRS.  Pulse arrival times $\tau_j$ and interpulse delays $t_j$ are given on the right. Expressions for the signal (Eq. \ref{eq:sxrstime2}), can be read directly off the diagrams.  Bottom: Same for 2D-SXRS.  The four terms in Eq. \ref{eq:polexpansion} correspond to the four diagrams, respectively. For example, contribution $iv$ to the 2D-SXRS can be written in the Schr\"{o}dinger picture as $\langle \alpha_3 G(t_2)\alpha_2 G(t_1)\alpha_1\rangle$ or the Heisenberg  picture as $\langle  \alpha_3(t_2+t_1)\alpha_2(t_1)\alpha_1(0)\rangle$.}\label{raman-diags}
+\end{figure}
+
+\section{CONTROL PARAMETERS IN X-RAY NONLINEAR SPECTROSCOPIES}
+
+\subsection{Wavevectors and Phases of the Applied Pulses}
+
+Intense x-ray pulses trigger a complex cascade of core-excitations and
+Auger decays in atomic targets.\cite{young_femtosecond_2010,doumy_nonlinear_2011} XFEL pulses
+are intense enough to create double-core hole states in
+molecular nitrogen,\cite{fang_double_2010} and to ionize the tightly bound core-orbitals leading to a
+rate-limiting step of Auger decay in the photoionization .\cite{hoener_ultraintense_2010} Double-core hole Auger
+electron spectroscopy in $\textrm{N}_2$ has also been
+performed.\cite{cryan_auger_2010} 
+Time-domain pump-probe measurements were carried
+out.\cite{glownia_time-resolved_2010}.  Experiments on the M-edge of
+krypton atoms were used to quantify the core lifetime with
+subfemtosecond precision,\cite{drescher_time-resolved_2002} and to
+measure real-time valence electron motion by an EUV probe of a
+molecule photoionized by a NIR pulse.\cite{goulielmakis_real-time_obs}
+
+\begin{figure}
+\includegraphics[width=5.80in,height=2.78in]{fpo}
+\caption{(Left) The OOO 2D-SXRS, plotted
+  using a nonlinear scale shown on the color bar to the left.  (Right)
+  Horizontal and diagonal slices, plotted using a linear scale, of the
+  2D spectrum on the left (in red).
+  The corresponding traces from the OON (dashed, blue) technique deomonstrate
+ the effect of changing the probe pulse in the three-pulse
+  sequence.}\label{fig:nma-2DRamanNNN}
+\end{figure}
+
+
+\subsection{Detecting Multiple Core Holes by Double-Quantum-Coherence Four Wave Mixing}
+HHG sources have been used to study vibrational motions in
+$\textrm{N}_2\textrm{O}_2$\cite{li_time-resolved_2008,li_visualizing_2010}
+and dynamic bond-breaking in
+$\textrm{NO}_2^+$.\cite{zhou_probing_2012} The photoelectron generated in the course of an
+HHG process can also be used to investigate the molecular ion through
+an interferometric process, a kind of stimulated electron
+spectroscopy.\cite{zhou_molecular_2008} The high intensity of the XFEL
+sources, and the precision of the HHG sources are
+complementary. Electromagnetically induced transparency~\cite{buth_electromagnetically_2007}
+studies at x-ray frequencies have
+recently led to experiments\cite{rohlsberger_electromagnetically_2012}
+which offer the possibility of augmenting the precision of the weaker
+HHG pulses with the stronger XFEL radiation, allowing strong and
+coherent pulses to be generated.
+
+
+\subsection{Spectroscopy with Quantum or Stochastic fields}
+X-ray signals involve single particle, field-driven transitions
+between core and valence electronic orbitals and the many-body valence
+response to a transiently created
+core-hole.\cite{gadzuk_core_1987,rohringer_x-ray_2007,glownia_time-resolved_2010}
+Pump-probe and stimulated Raman were among the very first nonlinear
+techniques employed with visible
+light.\cite{p.m._direct_1968,eckhardt_stimulated_1962,penzkofer_high_1979}
+These signals are robust since they do not require any phase control,
+and the detection is simple.  We first focus on all-x-ray stimulated
+Raman experiments in which the pump and probe pulses both have x-ray
+frequencies.  We then discuss more elaborate four wave mixing
+techniques.
+
+
+\begin{marginnote}
+\entry{EOM-CCSD}{equation-of-motion coupled cluster with single and double excitations}
+\end{marginnote}
+
+\section{OPTICAL RAMAN OF VIBRATIONS VS. X-RAY RAMAN OF ELECTRONS}
+
+To set the stage for x-ray Raman, we first briefly survey some key features of the Raman
+technique in the visible.  In both regimes the relevant molecular states form two bands
+denoted $g$ and $e.$  The energy gap between the bands is much larger than the intraband
+splittings.  In vibrational spectroscopy, the states $g$ and $g'$ ($e$ and $e'$)
+represent vibrational states in the ground (excited) electronic state.
+In the case of core spectroscopy $g,g'$ are valence excitations whereas $e,e'$ are core excited states.
+Raman spectroscopy and infrared absorption
+have long been used to study the vibrational states of molecules,
+aggregates,\cite{glatzel_electronic_2004} and
+materials.\cite{icors2010}
+
+\begin{figure}
+\includegraphics[width=5.33in,height=2.25in]{fpo}
+\caption{Calculated stimulated X-ray Raman spectra of {\it trans}-NMA; both pulses are polarized parallel to the lab-frame V axis. We use Gaussian pulses, 128-as full width at half-maximum in intensity, with the center frequency set to either 401.7 eV (N1s) or 532.0 (O1s). Pulse sequences for the two-color signals ({\it bottom row}) are given from left to right in chronological order; i.e., in ON the O pulse come first and the N pulse comes second. Figure reprinted with permission from Reference 107. Copyright 2012.}\label{fig3}
+\end{figure}
+
+
+\begin{sidewaysfigure}
+\includegraphics[width=7.5in,height=2.78in]{fpo}
+\caption{({\it Left column}) The OOO 2D stimulated X-ray Raman spectrum of {\it trans}-NMA, plotted using a nonlinear scale. ({\it Right column}) Horizontal and diagonal slices, plotted using a linear scale, of the 2D spectrum on the left ({\it red}). The corresponding traces from the OON ({\it dashed}, {\it blue}) technique demonstrate the effect of changing the probe pulse in the three-pulse sequence. Figure reprinted with permission from Reference 107. Copyright 2012.}\label{fig4}
+\end{sidewaysfigure}
+
+
+
+\subsection{Means of Detection: Photons vs. Photoelectrons}
+
+X-ray fields ionize the molecule, and the
+ejected electrons' energies and angular properties can be
+resolved. %\cite{stolow_femtosecond_2004,stolow_femtosecond_2003}
+Pairing the x-ray pulse with an actinic optical pump that prepares
+the molecule in a nonequilibrium state can result in other types of
+multidimensional signals.
+
+
+\subsection{Pulse Shaping: Intrapulse Phase Control}
+Pulse shaping controls the amplitude and
+phase of various modes of the field, written as $\varepsilon(\omega) e^{i \phi(\omega)}.$  Pulse
+shaping\cite{walmsley_characterization_2009}
+may be used to optimize the nonlinear optical and Raman signals and
+highlight desired features. The experimental difficulties
+for x-ray pulse-shaping are daunting, but technological progress in
+this area is proceeding very rapidly.  The
+expression for the effective polarizability given in Eq. \ref{eq:sxrstime2}
+ can be easily extended to cover the possibility that the
+upward and downward transitions are facilitated by different coincident pulses.
+In the optical domain,  much success has
+been made by using a narrowband pulse to electronically excite the
+system, which is then de-excited by a broadband pulse.%%  Another
+
+
+\section{FIRST-ORDER HEADING}
+This is an example of dummy text. This is an example of dummy text. This is an example of dummy text.
+This is an example of dummy text. This is an example of dummy text. This is an example of dummy text.
+% quote
+\begin{extract}
+This is an example text of quote or extract. This is an example text of quote or extract. 
+This is an example text of quote or extract. This is an example text of quote or extract.
+This is an example text of quote or extract. This is an example text of quote or extract.
+\end{extract}
+
+
+% Head 2
+\subsection{Second-Order Heading}
+This is an example of dummy text. This is an example of dummy text. This is an example of dummy text.
+This is an example of dummy text. This is an example of dummy text. This is an example of dummy text.
+This is an example of dummy text. This is an example of dummy text. This is an example of dummy text.
+This is an example of dummy text. This is an example of dummy text. This is an example of dummy text.
+
+\begin{textbox}
+\section{CHARGE TRANSFER}
+Although Mulliken (83) long ago used theory to anticipate the importance of ground state CT in intermolecular interactions, it now appears that electron delocalization may play an even more widespread role in aqueous chemistry than previously suspected (84). Ion-water CT (85--92) and the affinity of ions for aqueous interfaces (130--133), as well as the influence of ion-water and electron-water interactions on spectroscopy, biocatalysis, and nanoengineering (134--138), are subjects of intense current interest. However, despite multiple studies, the magnitude and importance of ion-water CT remain subjects of significant controversy. The intrinsic connection between CT and polarization makes the analysis of the CT interactions ambiguous. Consequently, formulations of CT range from those in which CT is considered to be an artificial term arising from incompleteness of the basis set to those, like natural bond analysis (139, 140), in which CT plays a predominant role in intermolecular binding. It is also unclear at present whether CT may be included as a stabilizing energy term or whether the actual transfer of charge is required for quantitative prediction of structure and dynamics at interfaces (86, 88, 92, 141). New fundamental studies of the origins of bonding in terms of the components discussed here will hopefully shed some light on this important problem (142).
+\end{textbox}
+
+
+
+% Head 3
+\subsubsection{Third-Order Heading}
+Physical data should be quoted with decimal points and negative exponents (e.g., 25.8 J K$^{-1}$ mol$^{-1}$), and arranged as follows where possible: mp/bp 20$^{\circ}$C; [$\alpha$]D20 $=$ $-$13.5 ($c = 0.2$, acetone) (please also give units for [$\alpha$] and $c$, usually deg cm$^3$ g$^{-1}$ dm$^{-1}$ and g cm$^{-3}$, respectively); 1H NMR (400 MHz, DMSO-$d_6$, $\delta$): 7.15 (s, 2H, Ar H), 1.3 (q, $J = 8$ Hz, 2H; CH$_2$), 0.9 (t, $J = 8$ Hz, 3H; CH$_3$); $^{13}$C NMR (100 MHz, CDCl$_3$, Î´): 175.4 (C$=$O), 156.5 (C4); IR (KBr): $\nu = 2972$ (w), 2907 (w), \ldots, 1026 (s; $\nu_{\rm as}$(SiOSi)), 971 ($\nu_{\rm s}$), $\ldots$, 666 (w; $\nu_{\rm s}$(SiOSi)), \ldots, 439 (m), 401 cm$^{-1}$ (m); UV-vis ($n$-hexane): $\lambda_{\max}$ ($\varepsilon$) $=$ 320 (5000), 270 nm (12000); EIMS $m/z$ (\%): 108 (20) [M$^+$], 107 (60) [M$^+$ $-$ H], 91 (100) [C$_7$H$_7^+$]; HRMS (ESI) $m/z$: [M $+$ H]$^+$ calcd for C$_{21}$H$_{38}$N$_{4}$O$_{6}$S, 475.2591; found, 475.2593. Anal. calcd for C$_{45}$H$_{28}$N$_{4}$O$_{7}$: C 62.47, H 3.41, N 6.78; found: C 62.27, H 3.46, N 6.80.
+
+\begin{textbox}
+\section{TEXT BOX HEAD}
+Although Mulliken (83) long ago used theory to anticipate the importance of ground state CT in intermolecular interactions, it now appears that electron delocalization may play an even more widespread role in aqueous chemistry than previously suspected (84). Ion-water CT (85--92) and the affinity of ions for aqueous interfaces (130--133), as well as the influence of ion-water and electron-water interactions on spectroscopy, biocatalysis, and nanoengineering (134--138), are subjects of intense current interest.
+\subsection{Text Box Sub-head}
+However, despite multiple studies, the magnitude and importance of ion-water CT remain subjects of significant controversy. The intrinsic connection between CT and polarization makes the analysis of the CT interactions ambiguous. Consequently, formulations of CT range from those in which CT is considered to be an artificial term arising from incompleteness of the basis set to those, like natural bond analysis (139, 140), in which CT plays a predominant role in intermolecular binding.
+\subsubsection{Text Box Subsub-head}
+It is also unclear at present whether CT may be included as a stabilizing energy term or whether the actual transfer of charge is required for quantitative prediction of structure and dynamics at interfaces (86, 88, 92, 141). New fundamental studies of the origins of bonding in terms of the components discussed here will hopefully shed some light on this important problem (142).
+\end{textbox}
+
+
+% Head 4
+\paragraph{Fourth-Order Heading}
+This is an example of dummy text. This is an example of dummy text. This is an example of dummy text.
+This is an example of dummy text. This is an example of dummy text. This is an example of dummy text.
+% enumerate
+\begin{enumerate}
+\item This is an example of numbered listing.
+\item This is an example of numbered listing. This is an example of numbered listing. This is an example of numbered listing. This is an example of numbered listing.
+\item This is an example of numbered listing.
+\item This is an example of numbered listing. This is an example of numbered listing. This is an example of numbered listing. This is an example of numbered listing.
+\item This is an example of numbered listing.
+\item This is an example of numbered listing. This is an example of numbered listing.
+\item This is an example of numbered listing.
+\end{enumerate}
+
+This is an example of dummy text. This is an example of dummy text. This is an example of dummy text. This is an example of dummy text.
+% itemize
+\begin{itemize}
+\item This is an example of bulleted listing.
+\item This is an example of bulleted listing. This is an example of bulleted listing.
+\item This is an example of bulleted listing.  This is an example of bulleted listing. This is an example of bulleted listing.
+\item This is an example of bulleted listing. This is an example of bulleted listing. This is an example of bulleted listing. This is an example of bulleted listing.
+\item This is an example of bulleted listing.
+\end{itemize}
+This is an example of dummy text.
+
+
+\subsection{Two-Dimensional impulsive stimulated Raman; 2D-SXRS}
+2D-SXRS extends 1D-SXRS by adding one more pulse
+(Fig. \ref{fig3}).  Two dimensional correlation plots are
+generated by varying the two interpulse delays $t_1$ and $t_2$.
+During these delays the system is in a coherence either between a
+valence-excited state and the ground state, or between different
+valence-excited states.
+
+\begin{marginnote}
+\entry{SXRS}{stimulated Raman spectroscopy}
+\end{marginnote}
+
+The 2D-SXRS signal is described by the four loop diagrams shown in
+Fig. \ref{fig4} which result in the following expression for the signal:
+\begin{equation}
+S_{2D-SXRS}(\Omega_1,\Omega_2)= \int_{0}^\infty dt_1  \int_{0}^\infty dt_2  e^{i \Omega_1 t_1+i \Omega_2 t_2}S_{2D-SXRS}(t_1,t_2),
+\end{equation}
+Eq. \ref{eq:polexpansion} contains interfering contributions of various forward and backward
+evolution periods.  In diagram $iii$, for example, we first excite
+with $\alpha_2$ (``first'' is along the loop, not in real time!),
+creating the state $\alpha_2 \vert g_o \rangle$, propagate forward for
+$t_2$ ($G(t_2)$), then act with $\alpha_3$, propagate backward for
+$t_1+t_2$ ($G^{\dagger}(t_1+t_2)$), and finally project the valence
+wavepacket into $\langle g_o \vert \alpha_1^\dagger$.  The other terms can be described
+similarly.
+
+
+Eq. \ref{eq:sxrstime2} may alternatively be recast in the
+Schr\"{o}dinger picture as
+\begin{equation}\label{eq:sxrstime2}
+  S_{\textrm{1D}}(t_1) = \Re \left[\langle\alpha_2 G(t_1)\alpha_1 \rangle - \langle \alpha^\dagger_1 G^\dagger(t_1) \alpha_2\rangle\right],
+\end{equation}
+where we have defined the ground state energy as zero.  The physical
+picture of the process is as follows: in the first term, interaction
+with the first pulse through $\alpha_1$ creates a valence
+wavepacket. The \emph{retarded} Green's function $G$ is responsible
+for \emph{forward} time evolution of the free molecule during the
+delay $t_1$
+\begin{equation}\label{eq:wpkt}
+  \vert \psi( t_1 ) \rangle = G(t_1) \alpha_1 \vert g_o \rangle = \sum_{g'} \alpha_{1;g' g} e^{-i \epsilon_{g'} t_1 }\vert g' \rangle.
+\end{equation}
+This is finally projected onto the state $\langle g_o \vert \alpha_2$ by the second pulse.  The
+valence-excited states which make up the wavepacket in
+Eq. \ref{eq:wpkt} can be represented as linear combinations of
+particle-hole excitations
+\begin{equation}
+  \vert g' \rangle = \sum_{ai} C^{g'}_{ai} c^{\dagger}_a c_i \vert g_o \rangle
+\end{equation}
+where $c^{\dagger}_a$ ($c_i$) is the creation (annihilation) operator
+for the virtual (occupied) orbital a (i).  In the second term of Eq. \ref{eq:sxrstime2}, a valence wavepacket
+$\alpha_2 \vert g_o \rangle$ is created by the second pulse, the
+\emph{advanced} Green's function $G^\dagger$ then propagates it
+\emph{backward} during $t_1$ until it is finally projected onto
+$\langle g_o \vert \alpha_1^\dagger$ by interaction with pulse 1.
+A compact visualization of the particle-hole wavepackets may be obtained by
+using natural transition orbitals which represent the reduced single electron particle
+and hole density matrix.
+
+
+Vibrational Raman spectroscopy may be described by expanding the polarizability
+perturbatively in the normal modes $Q_i$ of the molecule
+\begin{equation}\label{eq:polexpansion}
+\alpha = \alpha_0+ \sum_i\frac{\partial \alpha}{\partial Q_i} Q_i+ \sum_{i j}\frac{1}{2}\frac{\partial^2 \alpha}{\partial Q_i \partial Q_j} Q_i Q_j + \dots
+\end{equation}
+where
+\begin{equation}\label{eq:modedef}
+Q_i=  \sqrt{\frac{\hbar}{2 m_i \omega_i}} (a_i{}^{\dagger }+a_i),
+\end{equation}
+and $a_i$($a_i^{\dagger}$) are
+boson creation (annihilation) operators.  Similarly, in x-ray Raman we
+can expand the polarizability in the space of valence excitations as
+\begin{equation}
+\alpha = \alpha_0+ \sum_{i,j}K_{ij} c_i^\dagger c_j + \sum_{i,j,r,s}K_{ijrs} c_i^\dagger c_j c_r^\dagger c_s + \dots
+\end{equation}
+
+
+% Summary Points
+\begin{summary}[SUMMARY POINTS]
+\begin{enumerate}
+\item New x-ray light sources will enable nonlinear spectroscopy of
+  core-excitations in molecules.
+\item Stimulated X-ray Raman spectroscopies launch and probe valence
+  electron wavepackets though core-excited state intermediates.
+\item X-ray four wave mixing can reveal coupling between
+  core-excited states.
+\item Pulse wavevectors, phases, polarizations and  delays can be used
+to control the  nonlinear signals.
+\end{enumerate}
+\end{summary}
+
+% Future Issues
+\begin{issues}[FUTURE ISSUES]
+\begin{enumerate}
+\item More elaborate pulse sequences can be designed to apply the rapidly developing X-ray light source technology to the exploration of fundamental questions regarding many-body interactions in molecular systems.
+\item By adapting existing coherent, classical, nonlinear techniques to experiments using quantum and noisy sources, investigators can design new classes of signals, and additional opportunities to measure them with existing XFEL sources will be made possible.
+\item Complete control over the phase and amplitude of an intense X-ray pulse would allow sophisticated shaping techniques used in optical and IR spectroscopy to be applied to the X-ray regime.
+\item Simulations and experimental studies will be required to apply these techniques to study charge and energy transfer in systems such as photosynthetic complexes, donor-acceptor complexes, and semiconductor excitonic systems.
+\end{enumerate}
+\end{issues}
+
+%Disclosure
+\section*{DISCLOSURE STATEMENT}
+The authors are not aware of any affiliations, memberships, funding, or financial holdings that might be perceived as 
+affecting the objectivity of this review.
+
+
+% Acknowledgement
+\section*{ACKNOWLEDGMENTS}
+The support of the Chemical Sciences, Geosciences and Biosciences
+Division, Office of Basic Energy Sciences, Office of Science,
+U.S. Department of Energy, the National Science Foundation (Grant CHE-1058791) 
+and the National Institutes of Health (Grant GM059230)
+is gratefully acknowledged.
+
+
+
+
+% References
+\begin{thebibliography}{000}
+\bibitem{bloembergen_nonlinear_1982}
+Bloembergen N. 1982. Nonlinear optics and spectroscopy. \textit{Rev. Mod.
+  Phys.} 54:685--695
+
+
+\bibitem{zewail_femtochemistry:_2000}
+Zewail AH. 2000. Femtochemistry:â€‰ atomic-scale dynamics of the chemical bond.
+  \textit{J. Phys. Chem. A} 104:5660--5694
+
+\bibitem{Stohr1996}
+St\"{o}hr J. 1996. \textit{NEXAFS Spectroscopy}. Springer, New York
+
+\bibitem{groot_core_2008}
+\bibnote{Presents the first simulation of coherent, wave-vector-matched frequency-domain X-ray Raman signals.}
+de~Groot F, Kotani A. 2008. \textit{Core Level Spectroscopy of Solids}. {CRC}
+  Press. $1^{\textrm{st}}$ edition
+
+\bibitem{santra_concepts_2009}
+Santra R. 2009. Concepts in x-ray physics. \textit{Journal of Physics B:
+  Atomic, Molecular and Optical Physics} 42:023001
+
+\bibitem{chen_capturing_2001}
+Chen LX, J\"{a}ger WJH, Jennings G, Gosztola DJ, Munkholm A, Hessler JP. 2001.
+  Capturing a photoexcited molecular structure through time-domain x-ray
+  absorption fine structure. \textit{Science} 292:262--264
+
+\bibitem{rehr_theoretical_2000}
+Rehr JJ, Albers RC. 2000. Theoretical approaches to x-ray absorption fine
+  structure. \textit{Rev. Mod. Phys.} 72:621
+
+\bibitem{bressler_ultrafast_2004}
+Bressler C, Chergui M. 2004. Ultrafast x-ray absorption spectroscopy.
+  \textit{Chem. Rev.} 104:1781--1812
+
+\bibitem{ullrich_free-electron_2012}
+Ullrich J, Rudenko A, Moshammer R. 2012. {Free-electron} lasers: new avenues in
+  molecular physics and photochemistry. \textit{Ann. Rev. Phys. Chem.}
+  63:635--660
+
+\bibitem{gallmann_attosecond_2012}
+Gallmann L, Cirelli C, Keller U. 2012. Attosecond science: recent highlights
+  and future trends. \textit{Ann. Rev. Phys. Chem.} 63:447--469
+
+\bibitem{roentgen_new_1896}
+R\"{o}ntgen WC. 1896. On a new kind of rays. \textit{Nature} 53:274--276.
+  translated by Arthur Stanton from Sitzungsberichte der Wurzburger
+  Physik-medic. Gesellschaft, 1895
+
+\bibitem{duguay_approaches_1967}
+Duguay MA, Rentzepis PM. 1967. Some approaches to vacuum {UV} and x-ray lasers.
+  \textit{Appl. Phys. Lett.} 10:350--352
+
+\bibitem{perlman_synchrotron_1974}
+Perlman ML, Watson RE, Rowe EM. 1974. Synchrotron radiation - light fantastic.
+  \textit{Phys. Today} 27:30--37
+
+\bibitem{duke_synchrotron_2009}
+Duke P. 2009. \textit{Synchrotron Radiation: Production and Properties}. Oxford
+  University Press, {USA}
+
+\bibitem{emmap._first_2010}
+\bibnote{Demonstrates that the Linac Coherent Light Source is capable of producing ultrafast pulses in the 0.5--10-keV range.}
+{Emma P}, {Akre R}, {Arthur J}, {Bionta R}, {Bostedt C}, et al. 2010. First lasing and operation of an
+  {angstrom-wavelength} free-electron laser. \textit{Nat. Photon.} 4:641--647
+
+\bibitem{nugent_coherent_2010}
+Nugent KA. 2010. Coherent methods in the {x-ray} sciences. \textit{Adv. Phys.}
+  59:1--99
+
+\bibitem{reiter_route_2010}
+Reiter F, Graf U, Serebryannikov EE, Schweinberger W, Fiess M, et al. 2010. Route
+  to attosecond nonlinear spectroscopy. \textit{Phys. Rev. Lett.} 105:243902
+
+\bibitem{kapteyn_harnessing_2007}
+Kapteyn H, Cohen O, Christov I, Murnane M. 2007. Harnessing attosecond science
+  in the quest for coherent x-rays. \textit{Science} 317:775--778
+
+\bibitem{krausz_attosecond_2009}
+Krausz F, Ivanov M. 2009. Attosecond physics. \textit{Rev. Mod. Phys.} 81:163
+
+\bibitem{worner_attosecond_2011}
+W\"{o}rner HJ, Corkum PB. 2011. Attosecond spectroscopy. In \textit{Handbook of
+  High-resolution Spectroscopy}. John Wiley \& Sons, Ltd
+
+\bibitem{hentschel_attosecond_2001}
+Hentschel M, Kienberger R, Spielmann C, Reider GA, Milosevic N, et al. 2001. Attosecond metrology.
+  \textit{Nature} 414:509--513
+
+\bibitem{popmintchev_attosecond_2010}
+Popmintchev T, Chen M, Arpin P, Murnane MM, Kapteyn HC. 2010. The attosecond
+  nonlinear optics of bright coherent x-ray generation. \textit{Nat. Photon.}
+  4:822--832
+
+\bibitem{popmintchev_bright_2012}
+\bibnote{Used high harmonic generation to create ultra broadbond (2.5 as) with energies up to 1.6 keV.}
+Popmintchev T, Chen M, Popmintchev D, Arpin P, Brown S, et al. 2012. Bright coherent ultrahigh
+  harmonics in the {keV} {x-ray} regime from {mid-infrared} femtosecond lasers.
+  \textit{Science} 336:1287--1291
+
+\bibitem{bourzac_tabletop_2012}
+Bourzac K. 2012. Tabletop x-rays light up. \textit{Nature} 486:172--172
+
+\bibitem{goulielmakis_single-cycle_2008}
+Goulielmakis E, Schultze M, Hofstetter M, Yakovlev VS, Gagnon J, et al.
+  2008. {Single-Cycle} nonlinear optics. \textit{Science} 320:1614--1617
+
+\bibitem{bucksbaum_chapter_2011}
+Bucksbaum PH, Coffee R, Berrah N, E~Arimondo PB, Lin C. 2011. The first atomic
+  and molecular experiments at the {Linac Coherent Light Source} {x-ray} free
+  electron laser. In \textit{Adv. Atom. Mol. Opt. Phy.}. volume~60. Academic
+  Press. pp. 239--289
+
+\bibitem{walmsley_characterization_2009}
+Walmsley IA, Dorrer C. 2009. Characterization of ultrashort electromagnetic
+  pulses. \textit{Adv. Atom. Mol. Opt. Phy.} 1:308--437
+
+\bibitem{adams_nonlinear_2003}
+Adams B. 2003. \textit{Nonlinear Optics, Quantum Optics, and Ultrafast
+  Phenomena with {X-Rays}}. Springer. 1 edition
+
+\bibitem{Mukamel1995}
+Mukamel S. 1995. \textit{Principles of Nonlinear Optical Spectroscopy}. Oxford
+  University Press, New York
+
+\bibitem{mukamel_coherent_2009}
+Mukamel S, Tanimura Y, Hamm P. {eds.} 2009. \textit{Acc. Chem. Res.: Special
+  Issue on Coherent Multidimensional Optical Spectroscopy} 42:1207--1469
+
+\bibitem{danino_parametric_1981}
+Danino H, Freund I. 1981. Parametric down conversion of {x-rays} into the
+  extreme ultraviolet. \textit{Phys. Rev. Lett.} 46:1127--1130
+
+\bibitem{freund_parametric_1969}
+Freund I, Levine BF. 1969. Parametric conversion of {x-r}ays. \textit{Phys.
+  Rev. Lett.} 23:1143
+
+\bibitem{yoda_x-ray_1998}
+Yoda Y, Suzuki T, Zhang X, Hirano K, Kikuta S. 1998. {X-r}ay parametric
+  scattering by a diamond crystal. \textit{J. Synchrotron Radiat.} 5:980--982
+
+\bibitem{adams_parametric_2000}
+Adams B, Fernandez P, Lee WK, Materlik G, Mills DM, Novikov DV. 2000.
+  Parametric down conversion of {x-ray} photons. \textit{J. Synchrotron
+  Radiat.} 7:81--88
+
+\bibitem{nazarkin_nonlinear_2003}
+Nazarkin A, Podorov S, Uschmann I, F\"{o}rster E, Sauerbrey R. 2003. Nonlinear
+  optics in the angstrom regime: hard {x-ray} frequency doubling in perfect
+  crystals. \textit{Phys. Rev. A} 67:041804
+
+\bibitem{freund_nonlinear_1972}
+Freund I. 1972. Nonlinear {x-ray} spectroscopy. \textit{Opt. Commun.}
+  6:421--423
+
+\bibitem{tamasaku_visualizing_2011}
+Tamasaku K, Sawada K, Nishibori E, Ishikawa T. 2011. Visualizing the local
+  optical response to extreme-ultraviolet radiation with a resolution of
+  $\lambda$/380. \textit{Nat. Photon.} 7:705--708
+
+\bibitem{bannett_two-photon_1982}
+Bannett Y, Freund I. 1982. {Two-photon} {x-ray} emission from {inner-shell}
+  transitions. \textit{Phys. Rev. Lett.} 49:539--542
+
+\bibitem{arya_microscopic_1974}
+Arya K, Jha SS. 1974. Microscopic optical fields and mixing coefficients of
+  {x-ray} and optical frequencies in solids. \textit{P{R}amana} 2:116--125
+
+\bibitem{hudis_xray_1994}
+Hudis E, Shkolnikov PL, Kaplan AE. 1994. {X-r}ay stimulated {R}aman scattering
+  in {Li} and {He}. \textit{Appl. Phys. Lett.} 64:818--820
+
+\bibitem{freund_surface_1973}
+Freund I, Levine BF. 1973. Surface effects in the nonlinear interaction of
+  {x-ray} and optical fields. \textit{Phys. Rev. B} 8:3059--3060
+
+\bibitem{deisenhofer_structure_1985}
+Deisenhofer J, Epp O, Miki K, Huber R, Michel H. 1985. Structure of the protein
+  subunits in the photosynthetic reaction centre of rhodopseudomonas viridis at
+  {3~{\AA}} resolution. \textit{Nature} 318:618--624
+
+\bibitem{chapman_femtosecond_2011}
+Chapman HN, Fromme P, Barty A, White TA, Kirian RA, et al. 2011. Femtosecond x-ray protein nanocrystallography.
+  \textit{Nature} 470:73--77
+
+\bibitem{bargheer_coherent_2004}
+Bargheer M, Zhavoronkov N, Gritsai Y, Woo JC, Kim DS, et al.
+  2004. Coherent atomic motions in a nanostructure studied by femtosecond x-ray
+  diffraction. \textit{Science} 306:1771--1773
+
+\bibitem{elsaesser_transient_2012}
+Elsaesser T, Woerner M. 2012. Transient charge density maps from femtosecond
+  {X-Ray} diffraction. In C~Gatti, P~Macchi, eds., \textit{Modern
+  {Charge-Density} Analysis}. Springer Netherlands. pp. 697--714
+
+\bibitem{freund_optically_1970}
+Freund I, Levine BF. 1970. Optically modulated {x-ray} diffraction.
+  \textit{Phys. Rev. Lett.} 25:1241--1245
+
+\bibitem{eisenberger_mixing_1971}
+Eisenberger PM, {McCall} SL. 1971. Mixing of {x-ray} and optical photons.
+  \textit{Phys. Rev. A} 3:1145--1151
+
+\bibitem{woo_inelastic_1972}
+Woo JWF, Jha SS. 1972. Inelastic scattering of x-rays from optically induced
+  {charge-density} oscillations. \textit{Phys. Rev. B} 6:4081--4082
+
+\bibitem{freund_nonlinear_1972a}
+Freund I. 1972. Nonlinear {x-ray} diffraction. determination of valence
+  electron charge distributions. \textit{Chem. Phys. Lett.} 12:583--588
+
+\bibitem{lindenberg_time-resolved_2000}
+Lindenberg AM, Kang I, Johnson SL, Missalla T, Heimann PA, et al. 2000.
+  {Time-resolved} {x-ray} diffraction from coherent phonons during a
+  {laser-induced} phase transition. \textit{Phys. Rev. Lett.} 84:111--114
+
+\bibitem{cavalleri_tracking_2006}
+Cavalleri A, Wall S, Simpson C, Statz E, Ward DW, et al. 2006. Tracking the motion of charges in a terahertz light field by
+  femtosecond {x-r}ay diffraction. \textit{Nature} 442:664--666
+
+\bibitem{chen_time-resolved_2011}
+Chen J, Chen WK, Tang J, Rentzepis PM. 2011. Time-resolved structural dynamics
+  of thin metal films heated with femtosecond optical pulses. \textit{Proc.
+  Natl. Acad. Sci.} 108:18887--18892
+
+\bibitem{breidbach_universal_2005}
+\bibnote[-20pt]{Used many-body ab initio methods to monitor attosecond dynamics following impulsive core ionization.}
+Breidbach J, Cederbaum LS. 2005. Universal attosecond response to the removal
+  of an electron. \textit{Phys. Rev. Lett.} 94:033901
+
+\bibitem{young_femtosecond_2010}
+Young L, Kanter EP, KrÃ¤ssig B, Li Y, March AM, et al. 2010. Femtosecond electronic response of atoms to
+  ultra-intense {x-rays}. \textit{Nature} 466:56--61
+
+\bibitem{doumy_nonlinear_2011}
+Doumy G, Roedig C, Son S, Blaga CI, {DiChiara} AD, et al. 2011. Nonlinear atomic
+  response to intense ultrashort {x-r}ays. \textit{Phys. Rev. Lett.} 106:083002
+
+\bibitem{fang_double_2010}
+\bibnote{Demonstrates the first experimental observation of single-site DCHs using the LCLS.}
+Fang L, Hoener M, Gessner O, Tarantelli F, Pratt ST, et al. 2010. Double core-hole
+  production in $\textrm{N}_{2}$: Beating the {A}uger clock. \textit{Phys. Rev.
+  Lett.} 105:083005
+
+\bibitem{hoener_ultraintense_2010}
+Hoener M, Fang L, Kornilov O, Gessner O, Pratt ST, et al. 2010. Ultraintense
+  {x-ray} induced ionization, dissociation, and frustrated absorption in
+  molecular nitrogen. \textit{Phys. Rev. Lett.} 104:253002
+
+\bibitem{cryan_auger_2010}
+Cryan JP, Glownia JM, Andreasson J, Belkacem A, Berrah N, Blaga CI, et al. 2010. Auger electron angular
+  distribution of double {core-hole} states in the molecular reference frame.
+  \textit{Phys. Rev. Lett.} 105:083004
+
+\bibitem{glownia_time-resolved_2010}
+Glownia JM, Cryan J, Andreasson J, Belkacem A, Berrah N, et al. 2010.
+  Time-resolved pump-probe experiments at the {LCLS} 18:17620--17630
+
+\bibitem{drescher_time-resolved_2002}
+Drescher M, Hentschel M, Kienberger R, Uiberacker M, Yakovlev V, et al. 2002. {Time-resolved}
+  atomic {inner-shell} spectroscopy. \textit{Nature} 419:803--807
+
+\bibitem{goulielmakis_real-time_obs}
+Goulielmakis E, Loh Z, Wirth A, Santra R, Rohringer N, et al. 2010. {Real-time}
+  observation of valence electron motion. \textit{Nature} 466:739--743
+
+\bibitem{li_time-resolved_2008}
+Li W, Zhou X, Lock R, Patchkovskii S, Stolow A, Kapteyn HC, Murnane MM. 2008.
+  Time-resolved dynamics in $\textrm{N}_2\textrm{O}_4$ probed using high
+  harmonic generation. \textit{Science} 322:1207--\break1211
+
+\bibitem{li_visualizing_2010}
+Li W, {Jaro-Becker} AA, Hogle CW, Sharma V, Zhou X, et al. 2010. Visualizing electron rearrangement in space and time during
+  the transition from a molecule to atoms. \textit{Proc. Natl. Acad. Sci.}
+  107:20219 --20222
+
+\bibitem{zhou_probing_2012}
+Zhou X, Ranitovic P, Hogle CW, Eland JHD, Kapteyn HC, et al. 2012. Probing
+  and controlling {non-Born-Oppenheimer} dynamics in highly excited molecular
+  ions. \textit{Nat. Phys.} 8:232--237
+
+\bibitem{zhou_molecular_2008}
+Zhou X, Lock R, Li W, Wagner N, Murnane MM, Kapteyn HC. 2008. Molecular
+  recollision interferometry in high harmonic generation. \textit{Phys. Rev.
+  Lett.} 100:073902
+
+\bibitem{buth_electromagnetically_2007}
+\bibnote[-12pt]{Presents the first simulation of X-ray double-quantum-coherence signals, whicg depend on the coupling between spatially separated core transitions.}
+Buth C, Santra R, Young L. 2007. Electromagnetically induced transparency for
+  x-rays. \textit{Phys. Rev. Lett.} 98:253001
+
+\bibitem{rohlsberger_electromagnetically_2012}
+Rohlsberger R, Wille H, Schlage K, Sahoo B. 2012. Electromagnetically induced
+  transparency with resonant nuclei in a cavity. \textit{Nature} 482:199--203
+
+\bibitem{gadzuk_core_1987}
+Gadzuk JW. 1987. Core level spectroscopy: a dynamics perspective. \textit{Phys.
+  Scripta} 35:171--180
+
+\bibitem{rohringer_x-ray_2007}
+Rohringer N, Santra R. 2007. X-ray nonlinear optical processes using a
+  self-amplified spontaneous emission free-electron laser. \textit{Phys. Rev.
+  A} 76:033416
+
+\bibitem{p.m._direct_1968}
+Rentzepis PM. 1968. Direct measurements of radiationless transitions in
+  liquids. \textit{Chem. Phys. Lett.} 2:117--120
+
+\bibitem{eckhardt_stimulated_1962}
+Eckhardt G, Hellwarth RW, {McClung} FJ, Schwarz SE, Weiner D, Woodbury EJ.
+  1962. Stimulated {R}aman scattering from organic liquids. \textit{Phys. Rev.
+  Lett.} 9:455--457
+
+\bibitem{penzkofer_high_1979}
+Penzkofer A, Laubereau A, Kaiser W. 1979. High intensity {R}aman interactions.
+  \textit{Prog. Quant. Electr.} 6:55--140
+
+\bibitem{glatzel_electronic_2004}
+Glatzel P, Bergmann U, Yano J, Visser H, Robblee JH, et al. 2004. The electronic
+  structure of {Mn} in oxides, coordination complexes, and the
+  {Oxygen-Evolving} complex of photosystem {II} studied by resonant inelastic
+  x-ray scattering. \textit{J. Am. Chem. Soc.} 126:9946--9959
+
+\bibitem{icors2010}
+Champion P, Ziegler L, eds.. 2010. \textit{XXII International Conference on
+  {R}aman Spectroscopy (ICORS 2010)}. American Institute of Physics
+
+\bibitem{gelmukhanov_resonant_1999}
+Gel'mukhanov F, {\AA}gren H. 1999. Resonant x-ray {R}aman scattering.
+  \textit{Phys. Rep.} 312:87--330
+
+\bibitem{nordgren_soft_1989}
+Nordgren J, Bray G, Cramm S, Nyholm R, Rubensson J, Wassdahl N. 1989. Soft
+  x-ray emission spectroscopy using monochromatized synchrotron radiation
+  60:1690
+
+\bibitem{ament_resonant_2011}
+Ament L, van Veenendaal M, Devereaux T, Hill J, van~den Brink J. 2011. Resonant
+  inelastic x-ray scattering studies of elementary excitations. \textit{Rev.
+  Mod. Phys.} 83:705--767
+
+\bibitem{pub_663}
+Roslyak O, Mukamel S. 2010. Spontaneous and stimulated coherent and incoherent
+  nonlinear wave-mixing and hyper-{R}aleigh scattering. \textit{Lectures of
+  Virtual University on Lasers} :http://www.mitr.p.lodz.pl/evu/wyklady/
+
+\bibitem{cook_handbook_2005}
+Cook DB. 2005. \textit{Handbook of Computational Quantum Chemistry}. Dover
+  Publications
+
+\bibitem{tretiak_density_2002}
+Tretiak S, Mukamel S. 2002. Density matrix analysis and simulation of
+  electronic excitations in conjugated and aggregated molecules. \textit{Chem.
+  Rev.} 102:3171--3212
+
+\bibitem{nozieres_singularities_1969}
+{Nozi\`{e}res} P, {Dominicis} CTD. 1969. Singularities in the {x-ray}
+  absorption and emission of metals. {III.} {one-body} theory exact solution.
+  \textit{Phys. Rev.} 178:1097
+
+\bibitem{nozieres_singularities_1969-1}
+{Nozi\`{e}res} P, {Gavoret} J, {Roulet} B. 1969. Singularities in the {x-ray}
+  absorption and emission of metals. {II.} {self-consistent} treatment of
+  divergences. \textit{Phys. Rev.} 178:1084
+
+\bibitem{roulet_singularities_1969}
+{Roulet} B, {Gavoret} J, {Nozi\`{e}res} P. 1969. Singularities in the {x-ray}
+  absorption and emission of metals. {I}. {first-order} {P}arquet calculation.
+  \textit{Phys. Rev.} 178:1072
+
+\bibitem{langreth_singularities_1970}
+Langreth DC. 1970. Singularities in the {X-Ray} spectra of metals.
+  \textit{Phys. Rev. B} 1:471
+
+\bibitem{mahan_excitons_1967}
+Mahan GD. 1967. Excitons in metals: Infinite hole mass. \textit{Phys. Rev.}
+  163:612
+
+\bibitem{campbell_interference_2002}
+Campbell L, Hedin L, Rehr JJ, Bardyszewski W. 2002. Interference between
+  extrinsic and intrinsic losses in x-ray absorption fine structure.
+  \textit{Phys. Rev. B} 65:064107
+
+\bibitem{PhysRevB.72.235110}
+\bibnote[-17pt]{Presents the first simulation of two-dimensional time-domain stimulated X-ray Raman signals.}
+Mukamel S. 2005. Multiple core-hole coherence in x-ray four-wave-mixing
+  spectroscopies. \textit{Phys. Rev. B} 72:235110
+
+\bibitem{dhar_time_1994}
+Dhar L, Rogers JA, Nelson KA. 1994. Time-resolved vibrational spectroscopy in
+  the impulsive limit. \textit{Chem. Rev.} 94:157--193
+
+\bibitem{tanimura_two-dimensional_1993}
+\bibnote[15pt]{Derives closed expressions for coherent four-wave mixing signals, including the use of an electron-boson model.}
+Tanimura Y, Mukamel S. 1993. Two-dimensional femtosecond vibrational
+  spectroscopy of liquids. \textit{J. Chem. Phys.} 99:9496
+
+\bibitem{blank_direct_2000}
+Blank DA, Kaufman LJ, Fleming GR. 2000. Direct fifth-order electronically
+  nonresonant {R}aman scattering from $\textrm{CS}_2$ at room temperature.
+  \textit{J. Chem. Phys.} 113:771--778
+
+\bibitem{kubarych_diffractive_2002}
+Kubarych KJ, Milne CJ, Lin S, Astinov V, Miller RJD. 2002. Diffractive
+  optics-based six-wave mixing: Heterodyne detection of the full $\xi^{(5)}$
+  tensor of liquid $\textrm{CS}_2$. \textit{J. Chem. Phys.} 116:2016--2042
+
+\bibitem{li_two-dimensional_2008}
+Li YL, Huang L, Dwayne~Miller RJ, Hasegawa T, Tanimura Y. 2008. Two-dimensional
+  fifth-order {R}aman spectroscopy of liquid formamide: experiment and theory.
+  \textit{J. Chem. Phys.} 128:234507--234507--15
+
+\bibitem{zschornack_handbook_2007}
+Zschornack GH. 2007. \textit{Handbook of {x-ray} Data}. Springer. 1 edition
+
+\bibitem{krause_natural_1979}
+Krause MO, Oliver JH. 1979. Natural widths of atomic {K} and {L} levels,
+  {K}$\alpha$ {xâ€ray} lines and several {KLL} {A}uger lines. \textit{Journal
+  of Physical and Chemical Reference Data} 8:329--338
+
+%% \bibitem{patterson_resource_2010}
+%% Patterson B. 2010. Resource letter on stimulated inelastic x-ray scattering at
+%%   an {XFEL}. \textit{Technical report}. SLAC. also available as
+%%   http://slac.stanford.edu/pubs/slactns/tn04/slac-tn-10-026.pdf
+
+\bibitem{zholents_obtaining_2010}
+Zholents A, Penn G. 2010. Obtaining two attosecond pulses for x-ray stimulated
+  {R}aman spectroscopy. \textit{Nucl. Instrum. Meth. A} 612:254--259
+
+\bibitem{zholents_next-generation_2012}
+Zholents A. 2012. {Next-generation} {x-ray} {free-electron} lasers.
+  \textit{{IEEE} J. Sel. Top. Quant.} 18:248 --257
+
+\bibitem{brink_correlation_2006}
+{van den Brink} J, {van Veenendaal} M. 2006. Correlation functions measured by
+  indirect resonant inelastic x-ray scattering. \textit{Europhys. Lett.}
+  73:121--127
+
+\bibitem{schuelke_electron_2007}
+Schuelke W. 2007. \textit{Electron Dynamics by Inelastic {x-ray} Scattering}.
+  Oxford University Press, {USA}
+
+\bibitem{abbamonte_dynamical_2008}
+Abbamonte P, Graber T, Reed JP, Smadici S, Yeh C, Shukla A, Rueff J, Ku W.
+  2008. Dynamical reconstruction of the exciton in {LiF} with inelastic x-ray
+  scattering. \textit{Proc. Natl. Acad. Sci.} 105:12159 --12163
+
+\bibitem{abbamonte_imaging_2004}
+Abbamonte P, Finkelstein KD, Collins MD, Gruner SM. 2004. Imaging density
+  disturbances in water with a {41.3-Attosecond} time resolution.
+  \textit{Physical Review Letters} 92:237401
+
+\end{thebibliography}
+
+\end{document}
