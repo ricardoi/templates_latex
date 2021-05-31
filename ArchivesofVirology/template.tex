@@ -1,0 +1,450 @@
+%%%%%%%%%%%%%%%%%%%%%%% file template.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is a general template file for the LaTeX package SVJour3
+% for Springer journals.          Springer Heidelberg 2010/09/16
+%
+% Copy it to a new file with a new name and use it as the basis
+% for your article. Delete % signs as needed.
+%
+% This template includes a few options for different layouts and
+% content for various journals. Please consult a previous issue of
+% your journal as needed.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% First comes an example EPS file -- just ignore it and
+% proceed on the \documentclass line
+% your LaTeX will extract the file if required
+\begin{filecontents*}{example.eps}
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 19 19 221 221
+%%CreationDate: Mon Sep 29 1997
+%%Creator: programmed by hand (JK)
+%%EndComments
+gsave
+newpath
+  20 20 moveto
+  20 220 lineto
+  220 220 lineto
+  220 20 lineto
+closepath
+2 setlinewidth
+gsave
+  .4 setgray fill
+grestore
+stroke
+grestore
+\end{filecontents*}
+%
+\RequirePackage{fix-cm}
+%
+%\documentclass{svjour3}                      onecolumn (standard format)
+%\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
+\documentclass[smallextended]{svjour3}       % onecolumn (second format)
+%\documentclass[twocolumn]{svjour3}          % twocolumn
+%
+\smartqed  % flush right qed marks, e.g. at end of proof
+%
+\usepackage{graphicx}
+
+%
+\usepackage{mathptmx}      % use Times fonts if available on your TeX system
+%
+% insert here the call for the packages your document requires
+%\usepackage{latexsym}
+% etc.
+%
+% please place your own definitions here and don't use \def but
+% \newcommand{}{}
+%
+% Insert the name of "your journal" with
+
+\journalname{Phytopathology}
+%
+\begin{document}
+
+\title{Characterization of viruses and viroids by deep sequencing of small RNAs in \emph{Caladium spp.}
+%\thanks{Grants or other notes
+%about the article that should go on the front page should be
+%placed here. General acknowledgments should be placed at the end of the article.}
+}
+%\subtitle{Do you have a subtitle?\\ If so, write it here}
+
+%\titlerunning{Short form of title}        % if too long for running head
+
+\author{Ricardo I. Alcal\'a-Brise\~no \and  Aurora Londo\~no \and Adaobi Ibe \and Jane E. Polston
+}
+
+%\authorrunning{Short form of author list} % if too long for running head
+
+\institute{Ricardo I. Alcal\'a-Brise\~no \at
+              Department of Plant Pathology, University of Florida, Gainesville, FL, USA \\
+              %Tel.: +123-45-678910\\
+              %Fax: +123-45-678910\\
+              \email{ralcala@ufl.edu}           %  \\
+%             \emph{Present address:} of F. Author  %  if needed
+           \and
+           Aurora Londo\~no %\at
+           \and
+	   Adaobi Ibe
+	   \and
+	   Jane E. Polston
+	   \email{jep@ufl.edu}   
+              %second address
+}
+
+\date{Received: date / Accepted: date}
+% The correct dates will be entered by the editor
+
+
+\maketitle
+
+\begin{abstract}
+Insert your abstract here. Include keywords, PACS and mathematical
+subject classification numbers as needed.
+\keywords{First keyword \and Second keyword \and More}
+% \PACS{PACS code1 \and PACS code2 \and more}
+% \subclass{MSC code1 \and MSC code2 \and more}
+\end{abstract}
+
+\section{Introduction}
+\label{intro}
+\emph{Caladium spp.} (family Araceae) is produced in a very narrow area of Florida, Lake Placid the capital of Caladium. In a surface of X acres in the middle of the state. The little county produce up to the 90-95\% of the caladium production in the world.   Shorten plants, smaller leaves and less vigorous and weaker root system has been reported in Caladium. There is a few viral species infecting the Araceae family,   potyviruses  \emph{Dasheen mosaic virus} (DsMV),  \emph{Konjac mosaic virus} (KoMV) (family \emph{Potyvirus}), Taro virus, etc. etc. etc.  In Florida just has been reported in Caladium, Cholocasia and  Zandenteschia  (Hartman, 1974; Pappu et al., 1994). 
+We sort out  a deep sequence analysis to identify virus diversity in Caladiums in Florida.
+
+\section{Materials and methods}
+\label{sec:1}
+%Text with citations \cite{RefB} and \cite{RefJ}.
+
+\subsection{\emph{Caladium} samples}
+\label{sec:2}
+\emph{C. x hortulame} cultivars were collected from Lake Placid (Highlands County), Florida in 2011 to 2013 in central Florida. Caladium with multiple eyes, short and decoulored leaves were assigned as symptomatic specimens from 8 different cultivars and six cultivars as asymptomatic, used for RNAseq. In total 18 cultivars were sampled and potted in the facilities of the University of Florida in Gainesville and Balm. 
+
+\begin{table}[ht]
+ \caption{Cultivars for NGS }
+  \begin{center}
+\scalebox{1}{
+   \begin{tabular}{  c c  c }
+  	\hline
+  Cultivar & Farm & ID  \\ \hline
+
+
+\hline
+\end{tabular} 
+ }
+ \label{tabla results}
+  \end{center}
+\footnotemark{\small{Software: Illumina Pipeline (CASAVA) v1.8.2}}\\
+\footnotemark{\small{Fastq Quality Encoding: Sanger Quality (ASCII Character Code = Phred Quality Value+33)}}
+\end{table}
+
+
+\subsection{RNA \emph{Caladium} extraction for diagnosis and metagenomics}
+\label{sec:2}
+\emph{Caladium} RNA extraction for was done using three different protocols. 1) The method for small and high quality RNA extraction was modifying the Fl\'ores and Ll\'acer (1989) and Ochoa et al., (1996) using 20 g of tissue pulverized with liquid Nitrogen, adding  36 ml 2X GPS buffer [ 0.2 M Glycine, 0.1 M Na{$_2$}HPO{$_4$} and 0.6 M NaCl (p.H. 9.6)], 4 ml 10\% SD,  9.6 ml Phenol:Chloroform 1:1, 400 {$\mu$}l of  {$\beta$}-Mercaptoethanol, 400 {$\mu$}l Isopropanol and 10 mg of Bentonite powder and was chilled for 1 hour, shaking eventually. The samples were centrifuged at 6,000 xg for 30 minutes at 4¡C. The upper natant was recovered and adjusted to 40 ml with 2X GPS buffer  and precipitated with 1/3rd of Ethanol and mixed by inversion. 1 gr of CF-11 cellulose powder (Whatman) was added to the mixture and vigorously shake and incubate at 4¡C with rotation. Centrifuged up to 6,000 xg to precipitated the CF-11 cellulose powder, the supernatant was discarded. The CF-11 cellulose powder was washed up to 8 times with 25 ml of  1X STE buffer [50 mM Tris-HCl (p.H. 7.2), 100 mM M NaCl and 1mM EDTA (p.H. 6.8)] and 25 \% Ethanol. The CF-11 cellulose powder was packaged into a column and eluted with 10 ml of 1X STE buffer.  The previous eluting was precipitated with 25 ml isopropanol overnight at -20¡C and centrifuged at 12,000 xg for 30 minutes at 4¡C, the pellet was dried out and resuspended with 200 {$\mu$}l DEPC treated water. 
+2) A second RNA extraction protocol was implemented for Caladiums that allows us to test viruses and possible viroids, using 1.5 gr of tissue with 2\% of PVPP plus  20 mL of prewarmed at 65 ¡C grape buffer (4 M guanidine thiocyanate, 100 mM Tris-HCl (p.H. 8), 25 mM sodium citrate and 0.5 \% N-Lauryl sarcosyne), plus 0.1 volumes of sodium chloride and 1 \% {$\beta$}-Mercaptoethanol. Samples were vortex and incubated on ice for 5 minutes. The samples were washed two times with 1 volume of chloroform: isoamyl alcohol (24:1), shake for 5 to 10 minutes at room temperature and  centrifuged at 14,000 xg for 15 minutes at 4¡C. Sample were precipitated with one volume of isopropanol with 0.1 volume of NaCl 5M overnigth and washed two times with 75 \% etanol. Samples were rehydrate with prewarmed DEPC treated water. This methods allow us to recover small RNAs under 500 nucleotides. 3) A third method for plant RNA extraction we used the RNeasy plant mini kit, using the RC buffer supplemented with {$\beta$}-Mercaptoethanol as suggested for plants with high polysaccharides concentration, this protocol was intended for test for molecules over 400 nucleotides.
+%(see Sect.~\ref{sec:1}).
+%\paragraph{Paragraph headings} Use paragraph headings as needed.
+
+ 
+    
+%(see Sect.~\ref{sec:1}).
+%\paragraph{Paragraph headings} Use paragraph headings as needed.
+
+\subsection{Sequencing and bioinformatics}
+\label{sec:2}
+The RNA for metagenomics was prepared for a small RNA library preparation and sequenced by HiSeq 2000,  50 bp single-end lane (Macrogen, Seoul, Ko).  The  data  was analyzed  using FASTX-toolkit (Pearson et al., 1997), for quality and  tag removal from both data sets, reads and the trimming (filter) results are displayed in table 2. The sequences were assembled using different k-mer values by velvet (Zerbino et al 2009;), the RNAseq was analyzed using PFOR to identify viroid like-sequences (Wu, et al. 2012). The resulted contigs > 100 nt were analyzed by 1) by using BLASTN and BLASTX non redundant data base from the National Center for Biotechnology Information (NCBI) http://www.ncbi.nlm.nih.gov/, Alstchul et al., 1990)).
+ %2) By  primary and secondary structure motif search algorithms (cite et al., xxxx,), 
+ 2) to analyze any subviral pathogen we used the subviral RNA database (Rochealeau and Pelchat 2006). The top plant virus hits over 10${\_^5}$ and <90 nt  were used to design primers and map back to a reference sequence to corroborate the results.  Fo mapping back the reads to its reference sequence using BOWTIE (Langmead et al., 2009). 
+
+\begin{table}[ht]
+ \caption{Sequence results}
+  \begin{center}
+\scalebox{1}{
+   \begin{tabular}{ l c c c c c c }
+  	\hline\hline
+RNAseq & & & & & \\ \hline
+Sample & Total bases & Read count  & Filter reads & Contigs Velvet  & Contigs PFOR & (\%) \\
+Healthy Cal2 & 2,985,755,424 &	 58,544,224 &	0.0042 &	51.79	& 98.46 \\ 
+Grassy Cal &  2,773,957,269 & 	 54,391,319  &	0.0041 &	50.91	& 98.65   \\ \hline
+\end{tabular} 
+ }
+ \label{tabla results}
+  \end{center}
+\footnotemark{\small{Software: Illumina Pipeline (CASAVA) v1.8.2}}\\
+\footnotemark{\small{Fastq Quality Encoding: Sanger Quality (ASCII Character Code = Phred Quality Value+33)}}
+\end{table}
+
+%(see Sect.~\ref{sec:1}).
+
+\subsection{Molecular diagnosis}
+
+%\subsubsection{Rolling Cicrle Amplification}
+%\label{sec:2}
+%Rolling circle amplification was done using total DNA isolated from the samples that were selected from this survery, x ng of DNA were amplified by RCA amplification following the manufacturer specifications, the resulted amplification were digested with Hpa, HindIII, EcoR1 enzymes. The linear product were cloned and sequence in pBS using T4 ligase (Promega, Madison, WI) and sent to  Sanger sequencing.
+%\paragraph{Paragraph headings} Use paragraph headings as needed.
+
+\subsubsection{Reverse Transcription -PCR}
+\label{sec:2}
+Reverse Transcription (RT) -PCR  were diagnosed for RNA viruses (Promega, Madison Wisconsin and Twist DX, Some, Where). For RT-PCR, 500 ng of RNA were tested using the following primers;  Rubisco and Actin as house keeping genes (HKG) for Caladium.  The BLAST hits and the mapping of the viral agents were used for primer design. Screening potyviruses, Tospovirus, Cauilomoviruses and virods (table 2). 
+
+Further analyzed by RT-PCR for potyviruses, viroids and Tospvirus broad spectrum primer (Eiras et al 2001).  For RPA analysis we used the RNA extraction kit (fulanito de tal, Some, Where), RNA was stored at -20$^{\circ}$C or 80$^{\circ}$C. 
+
+
+\begin{table}[ht]
+ \caption{List of primers.}
+  \begin{center}
+%\scalebox{
+   \begin{tabular}{ l l c l l l }
+   	\hline
+Name 		&  Id 	 & sequence 5'- 3' 													&  size 	& Author \\ \hline \hline
+HKG 		&																					&		&	\\
+Rubisco 		&  JAP1053 	 & AGGCCCGCCTCACGGTATCC										& 500	& this paper\\
+			& JAP1054	 & CTGCATGCATTGCGCGGTGG										&		&		\\
+Actin			& JAP1055 	 & ATGAAGATCCTGACGGAGCG										& 360	& this paper \\
+			& JAP1056		 & CCACTGAGAACGATGTTGCC										& 		& 		\\ \hline
+Potyvirus 		&																					&		&	\\
+DMV 		&  JAP1037 	 & TAAAGGAGTGCGAGCTTCAGC										& 1000	& this paper \\
+			& JAP1038	 & TTTACCAGACCTTTACTGCGG										&		&		\\
+KMV			& JAP1039 	 & GACCGTGATGCTAATGAGGAGG										& 1000	& this paper \\
+			& JAP1040		 & AAGGCAGGCTCGTCCAGAG										& 		& 		\\ 
+Caulimovirus 	&																				&		&	\\
+BSV-like 		&  JAP1172 	 & GGGTTGGTATTAAGCCCAAC										& 875	& this paper\\
+			& JAP1173	 & CCAGTTCCTGTGATGTAATCC										&		&		\\
+Tospovirus &						&																&		&	\\
+			& 	algo 	 & XXXXXXXXXXXXXX												& 800 	& Eiras et al. 2001 \\
+			&  algo 2  & xxxxxxxxxxx 															& 		& 			\\ 	
+			 \hline \hline
+    \end{tabular} 
+   % }
+ \label{table_primers}
+  \end{center}
+\end{table}
+
+PCR protocols for HKG.\\
+Rubisco: \\
+1 cycle at 95¡C - 2 min, 30 cycles at 95¡C - 30 sec, 50-60¡ - 30 sec, 72¡C - 30 sec, 72¡ - 30 sec, 1 cycle at 72¡C - 7 min. \\
+$\beta$-actin: \\ 
+1 cycle at 95¡C - 2 min, 30 cycles at 95¡C - 30 sec, 50-54¡ - 30 sec, 72¡C - 30 sec, 72¡ - 30 sec, 1 cycle at 72¡C - 7 min. \\
+
+\subsubsection{Reverse Transcription -Recombinase Polymerase Amplification}
+We developed a quick assay for screening KoMV from caladiums using a new available probe, Recombinase Polymerase Amplification coupled to Reverse Transcription (RT-RPA). The RNA extraction was done using the following procedure. Primers must be larger than 30 nucleotides JAP1242 5' -GCTCTATCTAGACCGTGATGCT\\ AATGAGGAGG- 3'  and JAP1244 5' -TTTGCTAAATCCGCTTGCTCTGGATTATA\\TTGGG- 3' giving an amplicon smaller than 500 bp. The mixture was incubated at 42 $^{\circ}$C and cleaned up by heating at 95$^{\circ}$C for 15 minutes. 25 ul of the sample was runned in agarose gels 1 \% at 80 volts for 50 minutes. 
+
+%as required. Don't forget to give each section
+%and subsection a unique label (see Sect.~\ref{sec:1}).
+%\paragraph{Paragraph headings} Use paragraph headings as needed.
+
+%\begin{equation}
+%a^2+b^2=c^2
+%\end{equation}
+
+\subsubsection{Biological experimentas, transmission of viral and viroids}
+Bla bla bla bla
+
+%as required. Don't forget to give each section
+%and subsection a unique label (see Sect.~\ref{sec:1}).
+%\paragraph{Paragraph headings} Use paragraph headings as needed.
+
+\begin{equation}
+a^2+b^2=c^2
+\end{equation}
+
+
+
+\section{Results}
+\label{sec:1}
+%Text with citations \cite{RefB} and \cite{RefJ}.
+
+\subsection{Bioinformatics analysis of small RNAs}
+\label{sec:2}
+The small RNAs sequences were de novo assembly using velvet and a circular de novo assembly: PFOR. Velvet results for the non symptomatic plants were 2157 contigs with a mean length of 156 nt and max length of 1460 nt and for the symptomatic plants the number of contigs were 92228 with a mean length of 117 nt and max length of 1324 nt. PFOR resutls  for the non sympotamcis plants were 3 circles and for the symptomatic plants were 94 circles. The contigs were analyzed by blastn against the nr and viroid database, blast results are shown in table 3.
+
+\begin{table}[ht]
+ \caption{Blast results}
+  \begin{center}
+%\scalebox{
+   \begin{tabular}{ c c c c c }
+   	\hline
+Sample & Contig & Length & hit & e-value \\
+	\hline  
+Non-symptomatic & & & & \\
+	& nn & \# & virus 1 & e-10 \\
+Symptomatic & & & & \\
+	& nn & \# & virus 1 & e-10 \\		 
+    \end{tabular} 
+   % }
+ \label{table_primers}
+  \end{center}
+\end{table}
+
+%as required. Don't forget to give each section
+%and subsection a unique label (see Sect.~\ref{sec:1}).
+%\paragraph{Paragraph headings} Use paragraph headings as needed.
+%\begin{equation}
+%a^2+b^2=c^2
+%\end{equation}
+
+\subsection{Subsection title2}
+\label{sec:2}
+as required. Don't forget to give each section
+and subsection a unique label (see Sect.~\ref{sec:1}).
+\paragraph{Paragraph headings} Use paragraph headings as needed.
+\begin{table}[ht]
+ \caption{Blast results}
+  \begin{center}
+%\scalebox{
+   \begin{tabular}{ c c c  }
+   	\hline
+	Cultivar	&	KoMV	&	DsMV	\\
+Aaron	&	0/20	&	18/20	\\
+Brandywine	&	0/21	&	15/21	\\
+Candidum	&	6/21-	&	15/21	\\
+Carolyn Whorton	&	6/21-	&	13/21	\\
+Freida Hemple	&	0/21	&	9/21-	\\
+Pink Beauty	&	4/21-	&	17/21	\\
+Postman Joyner	&	2/21-	&	13/21	\\
+Red Flash	&	10/20-	&	9/20-	\\
+White Xmas	&	1/21-	&	17/21	\\
+White Queen	&	5/21-	&	19/21	\\
+Whiten Wing	&	0/20	&	11/21-	\\
+Rosebud	&	0/20	&	9/21-	\\
+Cherry Tart	&	1/21-	&	18/21	\\
+Fairytale Princess	&	0/21	&	18/21	\\
+Tapestry	&	0/21	&	18/21	\\
+	\hline  
+	 
+    \end{tabular} 
+   % }
+ \label{table_primers}
+  \end{center}
+\end{table}
+
+
+\subsection{Subsection title3}
+\label{sec:2}
+as required. Don't forget to give each section
+and subsection a unique label (see Sect.~\ref{sec:1}).
+\paragraph{Paragraph headings} Use paragraph headings as needed.
+\begin{equation}
+a^2+b^2=c^2
+\end{equation}
+
+\subsection{Subsection title4}
+\label{sec:2}
+as required. Don't forget to give each section
+and subsection a unique label (see Sect.~\ref{sec:1}).
+\paragraph{Paragraph headings} Use paragraph headings as needed.
+\begin{equation}
+a^2+b^2=c^2
+\end{equation}
+
+\subsection{Subsection title5}
+\label{sec:2}
+as required. Don't forget to give each section
+and subsection a unique label (see Sect.~\ref{sec:1}).
+\paragraph{Paragraph headings} Use paragraph headings as needed.
+\begin{equation}
+a^2+b^2=c^2
+\end{equation}
+
+\subsection{Subsection title6}
+\label{sec:2}
+as required. Don't forget to give each section
+and subsection a unique label (see Sect.~\ref{sec:1}).
+\paragraph{Paragraph headings} Use paragraph headings as needed.
+\begin{equation}
+a^2+b^2=c^2
+\end{equation}
+
+\subsection{Subsection title7}
+\label{sec:2}
+as required. Don't forget to give each section
+and subsection a unique label (see Sect.~\ref{sec:1}).
+\paragraph{Paragraph headings} Use paragraph headings as needed.
+\begin{equation}
+a^2+b^2=c^2
+\end{equation}
+
+
+
+
+
+
+\section{Discussion}
+\label{sec:1}
+Text with citations \cite{RefB} and \cite{RefJ}.
+\subsection{Subsection title}
+\label{sec:2}
+as required. Don't forget to give each section
+and subsection a unique label (see Sect.~\ref{sec:1}).
+\paragraph{Paragraph headings} Use paragraph headings as needed.
+\begin{equation}
+a^2+b^2=c^2
+\end{equation}
+
+% For one-column wide figures use
+\begin{figure}
+% Use the relevant command to insert your figure file.
+% For example, with the graphicx package use
+  \includegraphics{example.eps}
+% figure caption is below the figure
+\caption{Please write your figure caption here}
+\label{fig:1}       % Give a unique label
+\end{figure}
+%
+% For two-column wide figures use
+\begin{figure*}
+% Use the relevant command to insert your figure file.
+% For example, with the graphicx package use
+  \includegraphics[width=0.75\textwidth]{example.eps}
+% figure caption is below the figure
+\caption{Please write your figure caption here}
+\label{fig:2}       % Give a unique label
+\end{figure*}
+%
+% For tables use
+\begin{table}
+% table caption is above the table
+\caption{Please write your table caption here}
+\label{tab:1}       % Give a unique label
+% For LaTeX tables use
+\begin{tabular}{lll}
+\hline\noalign{\smallskip}
+first & second & third  \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+number & number & number \\
+number & number & number \\
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
+
+
+%\begin{acknowledgements}
+%If you'd like to thank anyone, place your comments here
+%and remove the percent signs.
+%\end{acknowledgements}
+
+% BibTeX users please use one of
+%\bibliographystyle{spbasic}      % basic style, author-year citations
+%\bibliographystyle{spmpsci}      % mathematics and physical sciences
+%\bibliographystyle{spphys}       % APS-like style for physics
+%\bibliography{}   % name your BibTeX data base
+
+% Non-BibTeX users please use
+\begin{thebibliography}{}
+%
+% and use \bibitem to create references. Consult the Instructions
+% for authors for reference list style.
+%
+\bibitem{RefJ}
+% Format for Journal Reference
+Author, Article title, Journal, Volume, page numbers (year)
+% Format for books
+\bibitem{RefB}
+Author, Book title, page numbers. Publisher, place (year)
+% etc
+\end{thebibliography}
+
+\end{document}
+% end of file template.tex
+
