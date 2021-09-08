@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: document-report.aux
+The style file: acm.bst
+Database file #1: bibliography.bib
+Warning--empty year in king_virus_2011
+You've used 14 entries,
+            2253 wiz_defined-function locations,
+            622 strings with 8397 characters,
+and the built_in function-call counts, 6751 in all, are:
+= -- 598
+> -- 548
+< -- 0
++ -- 225
+- -- 208
+* -- 682
+:= -- 1178
+add.period$ -- 43
+call.type$ -- 14
+change.case$ -- 144
+chr.to.int$ -- 0
+cite$ -- 15
+duplicate$ -- 130
+empty$ -- 368
+format.name$ -- 208
+if$ -- 1275
+int.to.chr$ -- 0
+int.to.str$ -- 14
+missing$ -- 15
+newline$ -- 74
+num.names$ -- 28
+pop$ -- 124
+preamble$ -- 1
+purify$ -- 131
+quote$ -- 0
+skip$ -- 70
+stack$ -- 0
+substring$ -- 365
+swap$ -- 28
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 54
+warning$ -- 1
+while$ -- 51
+width$ -- 16
+write$ -- 143
+(There was 1 warning)

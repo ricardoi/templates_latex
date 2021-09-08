@@ -1,0 +1,103 @@
+\begin{thebibliography}{10}
+
+\bibitem{alcala2020network}
+{\sc Alcal{\'a}-Brise{\~n}o, R.~I., Casarrubias-Castillo, K., L{\'o}pez-Ley,
+  D., Garrett, K.~A., and Silva-Rosales, L.}
+\newblock Network analysis of the papaya orchard virome from two agroecological
+  regions of chiapas, mexico.
+\newblock {\em Msystems 5}, 1 (2020), e00423--19.
+
+\bibitem{alcala2017genome}
+{\sc Alcal{\'a}-Brise{\~n}o, R.~I., Co{\c{s}}kan, S., Londo{\~n}o, M.~A., and
+  Polston, J.~E.}
+\newblock Genome sequence of southern tomato virus in asymptomatic tomato
+  `sweet hearts'.
+\newblock {\em Genome Announc. 5}, 7 (2017), e01374--16.
+
+\bibitem{alcala2018novel}
+{\sc Alcal{\'a}-Brise{\~n}o, R.~I., Okada, R., Herrera, F., and Valverde,
+  R.~A.}
+\newblock A novel endornavirus isolated from cluster bean (cyamopsis
+  tetragonoloba).
+\newblock {\em Archives of virology 163}, 8 (2018), 2279--2282.
+
+\bibitem{boukari2017occurrence}
+{\sc Boukari, W., Alcal{\'a}-Brise{\~n}o, R.~I., Kraberger, S., Fernandez, E.,
+  Filloux, D., Daugrois, J.-H., Comstock, J.~C., Lett, J.-M., Martin, D.~P.,
+  Varsani, A., et~al.}
+\newblock Occurrence of a novel mastrevirus in sugarcane germplasm collections
+  in florida, guadeloupe and r{\'e}union.
+\newblock {\em Virology journal 14}, 1 (2017), 1--8.
+
+\bibitem{dolja_deep_2020}
+{\sc Dolja, V.~V., Krupovic, M., and Koonin, E.~V.}
+\newblock Deep roots and splendid boughs of the global plant virome.
+\newblock {\em Annual Review of Phytopathology 58}, 1 (2020), 23--53.
+
+\bibitem{gorbalenya_new_2020}
+{\sc Gorbalenya, A.~E., Krupovic, M., Mushegian, A., Kropinski, A.~M., Siddell,
+  S.~G., Varsani, A., Adams, M.~J., Davison, A.~J., Dutilh, B.~E., Harrach, B.,
+  Harrison, R.~L., Junglen, S., King, A. M.~Q., Knowles, N.~J., Lefkowitz,
+  E.~J., Nibert, M.~L., Rubino, L., Sabanadzovic, S., Sanfa{\c c}on, H.,
+  Simmonds, P., Walker, P.~J., Zerbini, F.~M., Kuhn, J.~H., and {International
+  Committee on Taxonomy of Viruses Executive Committee}}.
+\newblock The new scope of virus taxonomy: partitioning the virosphere into 15
+  hierarchical ranks.
+\newblock {\em Nature Microbiology 5}, 5 (2020), 668--674.
+
+\bibitem{king_virus_2011}
+{\sc King, A., Lefkowitz, E., Adams, M., and Carstens, E.}
+\newblock {\em Virus taxonomy: ninth report of the International Committee on
+  Taxonomy of Viruses}.
+\newblock Academic Press.
+
+\bibitem{doi:10.1094/PBIOMES-07-19-0037-A}
+{\sc Lefebvre, M., Theil, S., Ma, Y., and Candresse, T.}
+\newblock The virannot pipeline: A resource for automated viral diversity
+  estimation and operational taxonomy units assignation for virome sequencing
+  data.
+\newblock {\em Phytobiomes Journal 3}, 4 (2019), 256--259.
+
+\bibitem{lefkowitz_virus_2018}
+{\sc Lefkowitz, E.~J., Dempsey, D.~M., Hendrickson, R.~C., Orton, R.~J.,
+  Siddell, S.~G., and Smith, D.~B.}
+\newblock Virus taxonomy: the database of the international committee on
+  taxonomy of viruses ({ICTV}).
+\newblock {\em Nucleic Acids Research 46\/} (2018), D708--D717.
+
+\bibitem{doi:10.1094/PHYTO-02-18-0067-R}
+{\sc Massart, S., Chiumenti, M., De~Jonghe, K., Glover, R., Haegeman, A.,
+  Koloniuk, I., Kom{\'\i}nek, P., Kreuze, J., Kutnjak, D., Lotos, L., Maclot,
+  F., Maliogka, V., Maree, H.~J., Olivier, T., Olmos, A., Pooggin, M.~M.,
+  Reynard, J.-S., Ruiz-Garc{\'\i}a, A.~B., Safarova, D., Schneeberger, P.
+  H.~H., Sela, N., Turco, S., Vainio, E.~J., Varallyay, E., Verdin, E.,
+  Westenberg, M., Brostaux, Y., and Candresse, T.}
+\newblock Virus detection by high-throughput sequencing of small rnas:
+  Large-scale performance testing of sequence analysis strategies.
+\newblock {\em Phytopathology{\textregistered} 109}, 3 (2019), 488--497.
+\newblock PMID: 30070618.
+
+\bibitem{roossinck_metagenomics_2015}
+{\sc Roossinck, M.~J.}
+\newblock Metagenomics of plant and fungal viruses reveals an abundance of
+  persistent lifestyles.
+\newblock {\em Frontiers in Microbiology 5\/} (2015), 767.
+
+\bibitem{roossinck_viruses_2019}
+{\sc Roossinck, M.~J.}
+\newblock Viruses in the phytobiome.
+\newblock {\em Current Opinion in Virology 37\/} (2019), 72--76.
+
+\bibitem{roossinck_plant_2015}
+{\sc Roossinck, M.~J., Martin, D.~P., and Roumagnac, P.}
+\newblock Plant virus metagenomics: Advances in virus discovery.
+\newblock {\em Phytopathology 105}, 6 (2015), 716--727.
+
+\bibitem{saad2020blueberry}
+{\sc Saad, N., Alcal{\'a}-Brise{\~n}o, R., Polston, J., Olmstead, J., Varsani,
+  A., and Harmon, P.}
+\newblock Blueberry red ringspot virus genomes from florida inferred through
+  analysis of blueberry root transcriptomes.
+\newblock {\em Scientific reports 10}, 1 (2020), 1--10.
+
+\end{thebibliography}
